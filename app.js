@@ -11,14 +11,13 @@ App({
     })
     wx.checkSession({
       success:function(){
-        console.log('ok')
         //session未过期 
-        this.userLogin;
+        that.userLogin();
       },
       fail:function(){
         console.log('fail')
         // 登录态过期 重新请求
-        that.userLogin;
+        that.userLogin();
       }
     })
   },
@@ -30,7 +29,7 @@ App({
         		if(res.code){
         			//获取code 把code当成参数传到后台请求API
         			wx.request({
-        				url:app.globalData.httpsurl+'public/index.php?s=privateinfo/wologin',
+        				url:that.globalData.httpsurl+'public/index.php?s=privateinfo/wologin',
         				data:{
         					code:res.code,
         				},
