@@ -1,10 +1,15 @@
 //index.js
 //获取应用实例
+var util=require('../../utils/util.js')//只能使用绝对路径
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {}
+    userInfo: {},
+    alldata:{},
+    scrollTop:0,
+    aa:true,
+    pro_imgurl:'',//路径
+    gets:''
   },
   //事件处理函数
   bindViewTap: function() {

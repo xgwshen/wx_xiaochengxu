@@ -23,6 +23,7 @@ App({
   },
   //用户登录
   userLogin:function(){
+    var that=this
     console.log('111')
   	wx.login({
         	success:function(res){

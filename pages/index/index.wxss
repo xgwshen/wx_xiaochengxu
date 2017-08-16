@@ -1,21 +1,190 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+image {
+  width:100%;
+  display:inline-block;
+  overflow:hidden;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.bigWrap{
+  background: #fff;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+swiper{
+  height:420rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+/*goTop回到顶部图标start*/
+.com-widget-goTop { 
+  position: fixed; 
+  bottom: 100rpx; 
+  right: 10rpx; 
+  background: rgba(0,0,0,0.7); 
+  border-radius: 50%; 
+  overflow: hidden; 
+  z-index: 500; 
+} 
+.com-widget-goTop .icon-gotop{ 
+  display: inline-block; 
+  width: 100rpx; 
+  height: 100rpx; 
+  line-height: 100rpx; 
+  font-size: 24rpx; 
+  color: #ffffff; 
+  text-align: center; 
+}
+/*客服*/
+contact-button {
+  display:inline-block;
+  line-height:0;
+  z-index:9999999999;
+  position:fixed;
+  right:36rpx;
+  bottom:30%;
+  width:50rpx;
+}
+/*优惠券*/
+/*.quan .quan_con{
+  width: 89%;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 30rpx;
+  line-height: 92rpx;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.quan .quan_fl{
+  color: #1a1a1a;
+  background: url(https://www.stokke-china.com/xcx/images/q.png) no-repeat left center;
+  background-size: 50rpx;
+  padding-left:66rpx;
+}
+.quan .quan_con .fr{
+  color: #666;
+}
+.quan_list{
+  overflow: hidden;
+  border-top: 2rpx solid #e5e5e5;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 20rpx 0 50rpx;
+  display: flex;display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.quan_list .q{
+  overflow:hidden;
+  width: 50%;
+}
+.quan_list .coupon{
+  position: relative;
+  width: 80%;
+  height: 140rpx;
+  color: #fff;
+  margin: 30rpx auto 0;
+  background: url(https://www.stokke-china.com/xcx/images/quan.png) no-repeat left top;
+  background-size: contain;
+  overflow: hidden;
+}
+.quan_list .coupon .jiage{
+  width: 74%;
+  font-size: 58rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding:10rpx 0 10rpx; 
+  float: left;
+}
+.quan_list .coupon .falist{
+  font-size: 30rpx;
+  line-height: 34rpx;
+  width: 74%;
+  text-align: center;
+  float: left;
+}
+.quan_list .coupon .btn{
+  float: right;
+  width: 14%;
+  padding: 3% 6%;
+  font-size: 24rpx;
+  line-height: 1.2;
+  text-align: center;
+}*/
+/*导航*/
+.content1{
+  display: flex;display: -webkit-flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-align: center;
+  padding: 40rpx 0 30rpx;
+}
+.content1 .main_list{
+  width:33.33%;
+  font-size: 26rpx;
+  color: #d70a1d;
+}
+.content1 .main_list .main_list_img{
+  height: 80rpx;
+}
+.content1 .main_list .main_list_img image{
+  width: 95rpx;
+}
+/*人气推荐*/
+/*.hot{
+  padding-top: 20rpx;
+  background: #efeff4;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.hot_bt{background: #fff;}
+.hot_bt .quan_fl{
+  background: url(https://www.stokke-china.com/xcx/images/hot.png) no-repeat left center;
+  background-size: 50rpx;
+}*/
+.hot_list{
+  padding:16rpx 2.5% 0;
+  overflow: hidden;
+  display: flex;display: -webkit-flex;
+  flex-wrap: wrap;
+  background: #e6e6e6;
+}
+.hot_wrap{
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: 30rpx;
+  background: #fff;
+  text-align: center;
+  border-radius: 12rpx;
+  overflow: hidden;
+  position: relative;
+}
+.hot_img{
+  height: 346rpx;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.hotImg{
+  position: absolute;
+  right: 0;
+  top: 33rpx;
+  width: 32%;
+}
+.hot_txt{
+  width: 92%;
+  margin: 0 auto;
+  padding-bottom: 40rpx;
+  text-align: left;
+}
+.hot_txt .hot_name{
+  font-size:26rpx;
+  color: #1c2951;
+  line-height: 1.3;
+  padding-left: 8rpx;
+}
+.hot_txt .hot_pri{
+  overflow: hidden;
+  line-height: 44rpx;
+  margin-top: 10rpx;
+}
+.hot_txt .hot_price{
+  font-size: 40rpx;
+  color: #d70a1d;
+  text-align: left;
+  float: left;
 }
