@@ -1,0 +1,153 @@
+<view class="address2" wx:if="{{logisticResult}}">
+  <view class="logistics logistics_notop">
+     <view class="logistics_addr"> {{logisticResult.AcceptStation}} </view>
+     <view class="logistics_date "> {{logisticResult.AcceptTime}} </view>
+     <view class="quan1"></view>
+  </view>
+</view>
+<view class="address" wx:else>
+  
+</view>
+<view class="address" >
+    <view class="addr_main">
+        <view class="left_img">
+            <icon type="success" size="18" color="#d70a1d"/>
+        </view> 
+        <view class="addr_center">
+            <view class="name">收货人：{{allinfo.name}}  {{allinfo.tel}}</view>
+            <view class="ip">{{allinfo.province}}{{allinfo.city}}{{allinfo.county}}{{allinfo.address}}</view>
+        </view>
+    </view>
+</view>
+
+<!--购买的产品信息-->
+<view class="box" wx:for="{{orderproduct}}">
+    <view class="order_con">
+        <view class="order_dian">
+            <view class="left">
+                <view class="left_img">
+                    <image src="../../images/sale_logo.png" mode="widthFix"></image>
+                </view>
+                <view class="left_dian_name"></view>
+            </view>
+        </view>
+
+        <view class="order_middle" data-goods_id="{{item.goods_id}}" bindtap="toInfo">
+            <view class="middle_img">
+                <image src="{{prcurl}}{{item.goods_thumb}}" mode="widthFix"></image>
+            </view>
+            <!--<view class="middle_center">
+                <view class="middle_name">{{item.goods_name}}</view>
+                <view class="middle_name" wx:if="{{(item.colour_name)}}">形容词</view>
+                <view class="middle_name" wx:elif="{{(item.norms_name)}}">形容词</view>
+                <view class="middle_name" wx:else></view>
+                <view class="middle_color">{{item.colour_name}} {{item.norms_name}}</view>
+            </view>
+            <view class="middle_right">
+                <view class="middle_price">￥{{item.price}}</view>
+                <view class="middle_hui">限时特惠</view>
+                <view class="middle_number">x{{item.number}}</view>
+            </view>-->
+
+            <view class="middle_center">
+                  <view class="middle_name">{{item.goods_name}}</view>
+                  <view class="middle_norms">
+                        <text class="guige">{{item.norms_name}}</text>
+                        <text class="middle_price">￥{{item.price}}</text>
+                  </view>
+                  <view class="middle_bottom">
+                        <view class="middle_hui">满减优惠</view>
+                        <view class="middle_number">x{{item.number}}</view>
+                  </view>
+              </view>
+
+
+        </view>
+    </view>
+    <!--合计-->
+    <view class="hr_div"></view>
+    <view class="total">
+        <view class="pay">
+            <view class="left">商品金额</view>
+            <view class="right">￥{{item.price*item.number}}</view>
+        </view>
+        <view class="pay" wx:if="{{allinfo.favorable-0}}" >
+            <view class="left">已优惠</view>
+            <view class="right">￥{{allinfo.favorable}}</view>
+        </view>
+
+    </view>
+</view>
+<!--
+<view class="white line_height fapiao">
+        <view class="left">发票信息</view>
+        <view class="right">个人/明细></view>
+</view>-->
+    <!--<view class="white line_height ly">
+        <view class="left" >买家留言</view>
+        <view class="right">
+            <text>{{allinfo.remark? allinfo.remark :'未留言' }}</text>
+        </view>
+    </view>-->
+
+     <view class="white line_height ly">
+        <view class="left">买家留言</view>
+    </view>
+    <view class="line_height lyval ly">
+        <text>{{allinfo.remark? allinfo.remark :'未留言' }}</text>
+    </view>
+    <!--优惠券-->
+    <!--
+    <view class="white line_height quan">
+        <view class="left">优惠券</view>
+        <view class="right" wx:if="{{favoraprice}}">-{{favoraprice}}</view>
+        <view class="right" bindtap="favora" wx:else>选择优惠券</view>
+    </view>-->
+    <view class="white line_height">
+        <view class="left">运费</view>
+        <view class="right">￥0.00</view>
+    </view>
+<view class="heji line_height">
+    共{{allinfo.count}}件，合计：<text class="red">￥{{allinfo.zj}}</text>
+</view>
+
+<view  wx:if="{{(allinfo.is_play) == 1 }}">
+      <view class="order_bottom"  wx:if="{{(allinfo.orderstatus) == 1 }}">
+          <view class="order_pay" bindtap="affirm" data-order_id="{{allinfo.id}}" data-index="{{index}}">确认收货</view>
+          <view class="order_cancel" bindtap="express" data-order_id="{{allinfo.orderid}}">查看物流</view>
+      </view>
+
+      <view class="order_bottom"  wx:elif="{{allinfo.orderstatus == 2}}">
+          <view class="order_pay">取消退款</view>
+      </view>
+
+      <view class="order_bottom"  wx:elif="{{allinfo.orderstatus == 3}}">
+          <!--评价之后就不出现了-->
+          <view class="order_pay" bindtap="eval" data-order_id="{{allinfo.id}}">去评价</view>
+          <view class="order_cancel" bindtap="express" data-order_id="{{allinfo.orderid}}">查看物流</view>
+      </view>
+      <view class="order_bottom"  wx:elif="{{allinfo.orderstatus == 4}}">
+          
+      </view>
+      <view class="order_bottom"  wx:elif="{{allinfo.orderstatus == 5}}">
+          <view class="order_pay">订单已完成</view>
+          <view class="order_cancel" bindtap="express" data-order_id="{{allinfo.orderid}}">查看物流</view>
+      </view>    
+      <view class="order_bottom"  wx:else>
+          <view class="order_pay">待发货</view>
+      </view>
+</view>
+<view  wx:else> 
+      <view class="order_bottom" >
+          <view class="order_pay" bindtap="getaffirm" data-order="{{allinfo.orderid}}">立即支付</view>
+          <view class="order_cancel" bindtap="cancel" data-order_id="{{allinfo.id}}" data-index="{{index}}">取消订单</view>
+      </view>
+</view>
+
+
+<!--订单编号、创建时间、付款时间、发货时间{{fatime}}-->
+<view class="ordercode ">
+   <view>订单编号：{{allinfo.orderid}}</view>
+   <view>创建时间：{{allinfo.addtime}}</view>
+   <view wx:if="{{fatime}}">发货时间：{{fatime}}</view><view wx:else> </view>
+</view>

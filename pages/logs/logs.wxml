@@ -1,6 +1,7 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<!--pages/logs/logs.wxml-->
+<!--<text>pages/logs/logs.wxml</text>-->
+<view class="log_img">
+    <image src="../../images/sale_logo.png" mode="widthFix"></image>
 </view>
+<view class="txt1">我们不仅懂酒更懂你</view>
+<view class="btn" bindtap="toIndex">开启尊享之旅</view>

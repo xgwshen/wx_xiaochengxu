@@ -1,0 +1,54 @@
+<!--pages/product/info.wxml-->
+<view class="top_nav">
+  <view class="{{classid==1? 'top_navbar_check':'' }}" bindtap="information" data-id="1"><text>纽慕品牌</text></view>
+  <view class="{{classid==2? 'top_navbar_check':'' }}" bindtap="information" data-id="2"><text class="no_rbor">最新动态</text></view>
+</view>
+<view id="bigWap">
+
+  <view class="product-dan-list" wx:if="{{classid==1}}">
+    <!-- 一个一循环-->
+    <view class="product-dan-item" data-id="{{item.id}}" bindtap="toinfo" wx:for="{{articles}}" wx:key="property">
+      <!-- <view class="list-name">{{item.title}}</view>  -->
+
+      <view class="artcle_tit">{{item.title}}</view>
+      <!-- <view class="list2-img">
+        <image src="{{imgurl}}{{item.titlepic}}" mode="widthFix"></image>
+      </view> -->
+       <view class="artcle_img"><image src="../../images/artcle_pic1.jpg" mode="widthFix"></image></view>
+           <view class="artcle_txt">法国纽慕（NIOMIO）葡萄酒是知名国际品牌，1876年由著名酿酒师维恩·纽慕先生创立于法国，距今已有140年的历史。在法国现有20余万个酒庄当中，纽慕（NIOMIO)红酒品牌以其独特的酿造工艺和简洁高雅的设计风格脱颖而出，独树一帜。曾多次荣获法国农林大奖，巴黎大赛金奖等不同类型奖项。2008年纽慕（NIOMIO）旗下梅丽莎酒庄更是获得了“法国最受欢迎的葡萄酒”的至高荣誉美称，并被收录到‘法国最佳’名册，成为法国人最喜爱的葡萄酒庄园之一。</view>
+            <view class="artcle_txt">2014年初，雄九控股集团斥巨资收购了纽慕（NIOMIO)品牌并完成了所有的法律手续，成为纽慕(NIOMIO)品牌的全球合法拥有者。同时雄九控股集团又控股了纽慕（NIOMIO)在法国各个地区的多家酒庄，把纽慕（NIOMIO)品牌红酒直供给国内的广大的消费者，使中国人也能品尝到国际贵族典范的红酒。我们深信，雄九控股集团和纽慕品牌一定会在中国酒市上大放异彩。</view>
+            <view class="artcle_img"><image src="../../images/artcle_pic2.jpg" mode="widthFix"></image></view>
+            <view class="artcle_txt artcle_txt">在纽慕（NIOMIO)品牌百年发展的历程中，一直都深受世界各国的私人葡萄酒会所和葡萄酒爱好人士的珍藏。如今，纽慕（NIOMIO)品牌红酒将华丽转身来到了中国，为国内的红酒品牌增添了一片新的色彩，也为红酒爱好人士送去了口福。</view>
+            <view class="artcle_img"><image src="../../images/artcle_pic3.jpg" mode="widthFix"></image></view>
+            <view class="artcle_txt artcle_txt2">百年品牌——纽慕（NIOMIO)必定会能带给您</view>
+            <view class="artcle_txt artcle_txt2">至高的尊享！</view> 
+      <!-- <view class="artcle_txt">{{content}}</view> -->
+      <view class="artcle_txt artcle_txt2">地址： 上海市嘉定区徐行镇嘉罗公路1661弄</view>
+      <view class="artcle_txt artcle_txt2">盛创企业家园43号楼3楼</view>
+      <view class="artcle_txt artcle_txt2">电话： 400-102－7979</view>
+      <view class="artcle_img artcle_img2">
+        <image src="../../images/artcle_ewm.jpg" mode="widthFix"></image>
+      </view>
+    </view>
+
+  </view>
+  <view class="product-dan-list share_list" wx:else>
+    <!--一个一循环-->
+     <!-- <view class="product-dan-item" data-id="{{item.id}}" bindtap="toinfo" wx:for="{{articles}}" wx:key="property">
+              <view class="list2-txt">
+                  <view class="list-name">{{item.title}}</view>
+              </view>
+          </view> 
+    <view class="product-dan-item" data-id="{{item.id}}" bindtap="toinfo" wx:for="{{articles}}" wx:key="property">
+      <view class="list2-txt">
+        <view class="list-name">{{item.title}}</view>
+        <view class="description">{{item.keywords}}</view>
+      </view>
+      <view class="list2-img">
+        <image src="{{imgurl}}{{item.titlepic}}" mode="widthFix"></image>
+      </view>
+    </view> -->
+    <view class="nodata1">暂无动态</view>
+    <view class="nodata2">雄商教育提供技术支持</view>
+  </view>
+</view>

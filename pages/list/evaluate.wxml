@@ -1,0 +1,26 @@
+
+<view class="good_evaluate_box" wx:if="{{status}}">
+      <view class="good_main good_evaluate_list" wx:for="{{evaluate}}">
+            <view class="good_Buyers">
+                <view class="Buyers">
+                    <image src="../../images/buyers.png" mode="widthFix"></image><text>{{item.nkname}})**</text>
+                </view>
+                <view class="Buyers_goal">
+                    <image wx:for="{{item.goal}}" src="../../images/star_select.png" mode="widthFix"></image>
+                </view>
+            </view>
+            <!--评价内容-->
+            <view class="Buyers_evaluate">{{item.content}}</view>
+            <!--评价图片-->
+            <view class="Buyers_evaluate_pic" >
+                        <image class="{{(index+1)%4? '':'no_rm'}}" wx:for="{{item.img}}" wx:for-item="venimg" src="{{url}}{{venimg}}" mode="widthFix"/>
+                <!--<image  src="../../images/buyers.png" mode="widthFix"></image>-->
+            </view>
+            <!--评价时间-->
+            <view class="Buyers_add_time">{{item.add_time}}</view>
+      </view>
+  </view>
+<view class="good_evaluate_box" wx:else >
+    <view class="nodata1">暂无评价</view>
+    <view class="nodata2">雄商教育提供技术支持</view>
+</view>

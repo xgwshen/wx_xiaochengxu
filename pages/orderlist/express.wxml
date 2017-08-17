@@ -1,0 +1,74 @@
+<view wx:if="{{val}}"> 
+    <!--商品-->
+    <view class="goods">
+        <view class="goods_img">
+            <image src="../../images/buyers.png" mode="widthFix"></image>
+        </view>
+        <view class="goods_info">
+            <view class="state">物流状态  <text>{{State}}</text></view>
+            <view class="grayinfo">承运公司：{{shipname}}</view>
+            <view class="grayinfo">运单号：{{LogisticCode}}</view>
+            <view class="grayinfo">官方电话：暂无</view>
+        </view>
+    </view>
+    <!--物流信息-->
+    <view class="logistics_box">
+        <!--物流信息提供-->
+        <view class="logistics_offer">
+            <view class="logistics_offer_img">
+                <image src="../../images/buyers.png" mode="widthFix"></image>
+            </view>
+            <view class="logistics_offer_txt">
+                本数据由<text>快递鸟</text>提供 
+            </view>
+            <view class="logistics_offer_btn"></view>
+        </view>
+        <!-- 物流开始--> 
+        <view class="logistics_list">
+            <view class="logistics {{index==0?'logistics_notop':''}}" wx:for="{{logisticResult}}">
+                <view class="logistics_addr">
+                <!--地点-->
+                    {{item.AcceptStation}}
+                </view>
+                <view class="logistics_date {{index==count-1?'logistics_date_nobor':''}}">
+                <!--时间-->
+                    {{item.AcceptTime}}
+                </view>
+                <view class="quan1"></view>
+            </view>
+        </view>
+        <!--物流结束-->
+    </view>
+ </view>
+ <view class="logistics_box"  wx:else>
+   <view class="logistics_offer">
+       <view class="logistics_offer_img">
+          <image src="../../images/buyers.png" mode="widthFix"></image>
+       </view>
+       <view class="logistics_offer_txt">
+         {{logisticResult}}
+      </view>
+   </view>
+ </view>
+
+ <!--你可能还想买-->
+<view class="tuijian">
+    <view class="line line1"></view>
+    <view class="line_center">
+        <image src="../../images/heart.png" mode="widthFix"></image><text>你可能还想买</text>
+    </view> 
+    <view class="line line2"></view>
+</view>
+<view class="tuijian_pro">
+    <view class="pro_list {{index%2==1?'no_rm':''}}"  wx:for="{{search}}" data-goods_id="{{item.goods_id}}" bindtap="getinfo">
+        <view class="pro_list_img">
+            <image src="{{item.goods_thumb}}" mode="widthFix"></image>
+        </view>
+        <view class="pro_list_name">{{item.goods_name}}</view>
+        <view class="price">
+            ¥{{item.promote_price}}
+             <!--<text>¥{{item.price}}</text>-->
+        </view>
+    </view>
+   
+</view>

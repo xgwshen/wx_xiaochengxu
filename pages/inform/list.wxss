@@ -1,0 +1,126 @@
+.top_nav{
+  padding: 0 4%;
+  border-top:2rpx solid #e6e6e6; 
+  width: 92%;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  color: #1c2951;
+}
+.top_nav view{
+  width:33.33%;
+  display: inline-block;
+}
+.top_nav view text{
+  line-height:25px;
+  display: inline-block;
+  border-right:2rpx solid #e6e6e6;
+  width:100%;
+  box-sizing: border-box;
+}
+.top_nav .top_navbar_check{
+  color: #d70a1d;
+}
+#bigWap{
+  padding:98rpx 4% 0;
+}
+
+/*单品*/
+.product-dan-list{
+    font-size: 24rpx;
+}
+.product-dan-list .product-dan-item{
+    overflow: hidden;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+    /* padding:38rpx 34rpx 34rpx; */
+    background: #fff;
+    border-radius: 12rpx;
+    position: relative;
+}
+.product-dan-list .list-name{
+  width: 90%;
+  font-size: 30rpx;
+  padding: 0 5%;
+  line-height: 72rpx;
+  color: #000;
+  background: rgba(255, 255, 255, .6);
+  position: absolute;
+  bottom: 0;
+}
+/* .product-dan-list .description{
+  font-size: 30rpx;
+  line-height:1.2;
+  color: #666;
+  margin-bottom: 22rpx;
+} */
+.product-dan-list .product-dan-item .list2-img{
+    overflow: hidden;
+    text-align: center;  
+}
+.product-dan-list .product-dan-item .list2-img image{
+    width: 100%;
+    display: block;
+}
+/* .product-dan-list .product-dan-item .date{
+  padding-top: 40rpx;
+  font-size: 28rpx;
+  border-top:2rpx solid #e6e6e6; 
+  text-align: right;
+  color: #666;
+} */
+/*互通消息*/
+.share_list .product-dan-item{
+  box-shadow: 0 0 16rpx rgba(121, 121, 121, .3);
+  -webkit-box-shadow: 0 0 16rpx rgba(121, 121, 121, .3);
+}
+/*纽慕品牌  */
+.artcle_tit{
+  padding-top: 46rpx;
+  padding-bottom: 10rpx;
+  text-align: center;
+  color: #010101;
+  font-size: 30rpx;
+}
+.artcle_img{
+  margin-top: 26rpx;
+  margin-bottom: 26rpx;
+  text-align: center;
+}
+.artcle_txt{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  color: #808080;
+  text-align: justify;
+}
+.artcle_txt2{
+  text-align: center;
+}
+.artcle_img2 image{
+  width: 50%;
+  margin-bottom: 68rpx;
+}
+
+.nodata1,.nodata2{
+  text-align: center;
+  font-size: 32rpx;
+  color: #babcc0;
+}
+.nodata1{
+  margin-top: 30%;
+}
+.nodata2{
+  margin-top: 60%;
+}
+
+
+
+
+
+

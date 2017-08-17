@@ -1,0 +1,86 @@
+<!--列表-->
+<view wx:if="{{(shoplist==1)}}"> 
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+          加载中...
+    </loading>
+</view>
+<view wx:else>
+  <view  wx:if="{{(shoplist.data.length)}}">
+      <view class="box"><!--shoplist-->
+          <view class="list">
+              <!--品牌信息-->
+              <view class="top">
+                  <view class="top_brand">
+                      <view class="top_band_img">
+                          <image src="../../images/sale_logo.png" mode="widthFix"></image>
+                      </view>
+                  </view>
+              </view>
+              <!--产品1信息-->
+              <checkbox-group bindchange="checkboxChange"  >
+                <view class="middle-box" wx:for="{{shoplist.data}}">
+
+                <view bindtap="delItem" class="posit">
+                      <view class="del" data-cartid="{{item.id}}" data-index="{{index}}" catchtap="del">删除</view>
+                  </view>
+                <view class="middle" style="{{item.txtStyle}}" >
+                      <view class="check_one" >  <!--item.price*item.goods_number-->
+                          <label>
+                              <checkbox value="{{index}}" data-indexs="{{index}}" class="success" checked="{{item.check}}" data-check="{{item.check}}" color="#f65f04"/>
+                              <!--<icon class="check_icon" size="23" type="circle" style="opacity:{{item.check ? 0: 1}}"></icon>
+                              <icon class="check_icon_checked" size="23" type="success" style="opacity:{{item.check ? 1: 0}}" color="#f65f04"></icon>-->
+                          </label>
+                      </view>
+                      <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+                      <view class="pro_img">
+                          <image bindtap="toInfo" data-index="{{index}}" src="{{shoplist.prcurl}}{{item.goods_thumb}}"></image>
+                      </view>
+                      <view class="pro_info">
+                          <view ndtap="toInfo" data-index="{{index}}" class="pro_name">{{item.goods_name}}</view>
+                          <!--<view class="pro_color">{{item.colour_name}}{{item.norms_name}}</view>-->
+                          <view class="pro_detail">
+                            <view class="pro_ml">价格</view>
+                            <view class="price">￥{{item.price}}</view> 
+                          </view>
+                          <view class="pro_pricebox">
+                              <view class="pur_num">购买数量</view>
+                              <view class="number">
+                                  <view class="good_num_red" bindtap="reduce" data-index="{{index}}">-</view>
+                                  <input class="good_num_val" type="text" disabled value="{{item.goods_number}}" bindblur="leavedata" data-index="{{index}}"/>
+                                  <view class="good_num_add" bindtap="add" data-index="{{index}}">+</view>
+                              </view>
+                          </view>
+                      </view>
+                      </view>
+                  </view>
+          </view>
+
+              </checkbox-group>
+              <!--产品信息1end-->
+          </view>
+      </view>
+      <!--底部-->
+      <view class="bottom">
+        <view class="check_all" >
+            <checkbox value="false" bindtap="bindSelectAll"  checked="{{selectedAllStatus}}"  color="#f65f04"/><text>全选</text>
+        </view>
+        <view class="buy_btn" bindtap="oncebuy">去结算</view>
+        <view class="money">
+            <view class="money_all">总计：<text>￥{{shoplist.allprice}}</text></view>
+            <view class="txt">不含运费</view>
+        </view>
+    </view>
+
+  </view>
+  <view wx:else>
+      <view class="aa">
+          <view class="txt1">购物车还木有宝贝哦~</view>
+          <view class="txt2">快给我挑点宝贝</view>
+          <view bindtap="toIndex" class="txt3">去逛逛</view>
+          <view class="txt4">雄商教育提供技术支持</view>
+    </view>
+  </view>
+</view>
+<toast hidden="{{aa}}" duration="1000" bindchange="toastHide">
+   {{gets}}
+</toast>

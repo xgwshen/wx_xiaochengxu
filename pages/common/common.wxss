@@ -1,0 +1,14 @@
+.nodata1,.nodata2,.nodata3{
+  text-align: center;
+  font-size: 32rpx;
+  color: #babcc0;
+}
+.nodata1{
+  margin-top: 30%;
+}
+.nodata2{
+  margin-top: 10%;
+}
+.nodata3{
+  margin-top: 50%;
+}

@@ -1,0 +1,41 @@
+<form bindsubmit="torderlist" > 
+    
+    <view wx:for="{{orderproduct}}" wx:for-index="idx" wx:for-item="productinfo" class="list_box">
+    <!-- 评价开始--> 
+        <view class="top"> <!--加图{{prcurl}}{{productinfo.goods_thumb}}-->
+            <view class="top_img"><image src="{{prcurl}}{{productinfo.goods_thumb}}" mode="widthFix"></image></view>
+            <view class="txt">总评分</view>
+            <view class="fenzhi">
+                <block wx:for="{{stars}}" >
+                    <image class="star-image" src="{{productinfo.key > item ?selectedSrc: normalSrc}}" mode="widthFix">
+                        <view class="item" style="left:0" data-index="{{idx}}" data-key="{{item+1}}" bindtap="selectRight"></view>
+                    </image>
+                </block>
+            </view>
+        </view>
+        <view class="pingjia">
+            <view class="ping_con">评价</view>
+            <textarea  placeholder="亲，快来说下宝贝的亮点吧!" name="content" auto-height bindblur="evaluatedata" data-index="{{idx}}" placeholder-class="textarea_place"/>
+            <view class="Buyers_evaluate_pic" >
+                <image wx:for="{{productinfo.evaluatepic}}" src="{{fileprc}}{{item}}" mode="widthFix" class="{{index+1%4? '':'no_rm'}}"/>
+           </view>
+            <!--<view class="chooseImageBox"><image src="{{tempFilePaths}}" wx:for="{{tempFilePaths}}"></image></view>-->
+            <view class="chooseImage" bindtap="chooseimage" data-index="{{idx}}"></view>
+            <view class="choose_tit">上传图片</view>
+        </view>
+        <!--匿名-->
+        <!--<view class="niming">
+            <label>
+                <checkbox value="value" checked color="#ff4b00"/>
+                匿名评价 <text>你写的评论会以匿名的形式展现</text>
+            </label>
+        </view>-->
+        <!--评价结束-->
+    </view>
+    <view class="sub-btn" >
+        <button formType="submit">发表评价</button> 
+    </view>
+</form>
+<toast hidden="{{aa}}" duration="1000" bindchange="toastHide">
+   {{gets}}
+</toast>

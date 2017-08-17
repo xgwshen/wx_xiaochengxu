@@ -1,0 +1,65 @@
+<view class="top">
+    <view class="topcenter">
+        <view class="log_img">
+            <image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'../../images/defaultImg.png'}}" mode="widthFix"></image>
+        </view>
+        <view class="log_name" bindtap="impoweragain"  wx:if="{{userInfo.islogin==0}}">{{userInfo.nickName}}</view>
+        <view class="log_name" wx:else >{{userInfo.nickName}}</view>
+    </view>
+    
+</view>
+<!--main列表-->
+<view class="main_con main_con1">
+      <navigator class="main_list" url="../orderlist/orderlist">
+        <view class="main_list_img">
+              <image src="../../images/pers_order.png" mode="widthFix"></image>
+        </view>
+        <view class="my_coupon_txt">我的订单</view>
+    </navigator>
+      <navigator class="main_list" url="../orderlist/orderlist?size=6">
+          <view class="main_list_img">
+                <image src="../../images/pers_nopay.png" mode="widthFix"></image>
+          </view>
+          <view class="my_coupon_txt">待付款</view>
+      </navigator>
+      <navigator class="main_list" url="../orderlist/orderlist?size=2">
+          <view class="main_list_img">
+                <image src="../../images/pers_nofahuo.png" mode="widthFix"></image>
+          </view>
+          <view class="my_coupon_txt">待发货</view>
+      </navigator>
+      <navigator class="main_list" url="../orderlist/orderlist?size=3">
+           <view class="main_list_img">
+                <image src="../../images/pers_noshou.png" mode="widthFix"></image>
+          </view>
+          <view class="my_coupon_txt">待收货</view>
+      </navigator>
+      <navigator class="main_list" url="../orderlist/orderlist?size=1">
+          <view class="main_list_img">
+                <image src="../../images/pers_noping.png" mode="widthFix"></image>
+          </view>
+          <view class="my_coupon_txt">待评价</view>
+      </navigator>
+</view>
+<view class="main_con main_con2">
+      <navigator class="main_list" url="../coupon/coupon">
+          <image src="../../images/pers_hui.jpg" mode="widthFix"></image>
+          <text class="my_coupon_txt">我的优惠</text>
+          <view class="right"><image src="../../images/jiantou2.png" mode="widthFix"></image></view>
+      </navigator>
+      <view class="main_list" bindtap="toAddrlist">
+          <image src="../../images/pers_ip.jpg" mode="widthFix"></image>
+          <text class="my_coupon_txt">地址管理</text>
+          <view class="right"><image src="../../images/jiantou2.png" mode="widthFix"></image></view>
+      </view>
+      <navigator class="main_list" url="../inform/list">
+          <image src="../../images/pers_message.jpg" mode="widthFix"></image>
+          <text class="my_coupon_txt">关于纽慕</text>
+          <view class="right"><image src="../../images/jiantou2.png" mode="widthFix"></image></view>
+      </navigator>
+      <view class="main_list" bindtap="toJiontel">
+          <image src="../../images/pers_kefu.jpg" mode="widthFix"></image>
+          <text class="my_coupon_txt">客服电话</text>
+          <view class="right">400-102-7979</view>
+      </view>
+</view>

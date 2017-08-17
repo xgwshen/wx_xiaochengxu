@@ -1,4 +1,97 @@
 <!--index.wxml-->
-<scroll-view class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}" bindscroll="scroll" bindscrolltolower="scrolltolower" style="postion:absolute;left:0; top:0;bottom:0;right:0;">
-<text>weishen study is lower</text>
+<scroll-view class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}"   bindscroll="scroll" bindscrolltolower= "scrolltolower" style="position: absolute; left: 0; top:0; bottom: 0; right: 0;">
+  <swiper indicator-dots="true" indicator-color="#dfddd6" indicator-active-color="#9c9472">
+    <block wx:for="{{alldata.adlist}}" wx:key="property">
+      <swiper-item>
+          <image src="{{item.litpic}}" class="slide-image" width="100%" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <view class="content1">
+        <view class="main_list" bindtap="coupons" data-fav_id="{{alldata.favorablelist[0].fav_id}}" data-classify_id="{{alldata.favorablelist[0].classify_id}}">
+          <view class="main_list_img">
+                <image src="../../images/quan.jpg" mode="widthFix"></image>
+          </view>
+          <view class="my_coupon_txt">优惠券</view>
+      </view>
+        <navigator class="main_list" url="../soso/soso">
+            <view class="main_list_img">
+                  <image src="../../images/soso.jpg" mode="widthFix"></image>
+            </view>
+            <view class="my_coupon_txt">搜索</view>
+        </navigator>
+        <navigator class="main_list" url="../orderlist/orderlist?size=3">
+            <view class="main_list_img">
+                  <image src="../../images/wuliu.jpg" mode="widthFix"></image>
+            </view>
+            <view class="my_coupon_txt">物流查询</view>
+        </navigator>
+  </view>
+  <!--人气推荐-->
+  <!--<view class="hot">-->
+       <!--<view class="quan hot_bt">
+            <view class="quan_con">
+              <text class="fl quan_fl">人气推荐</text>
+              <text class="fr" bindtap="toClass">更多</text>
+            </view>
+        </view>-->
+        <view class="hot_list">
+            <view class="hot_wrap {{index%2? 'no_rm':''}}" wx:for="{{alldata.productlist}}" wx:key="property">
+                <view data-goods_id="{{item.goods_id}}" bindtap="getinfo">
+                    <view class="hot_img"><image src="{{item.goods_thumb}}" mode="widthFix" ></image></view>
+                    <view class="hot_txt">
+                        <view class="hot_name">{{item.goods_name}}</view>
+                        <view class="hot_pri">
+                            <!--<text class="hot_price">￥{{(item.promote_price-0)?item.promote_price:item.price}}</text>-->
+                            <text class="hot_price">￥{{(item.promote_price-0)?item.promote_price:item.price}}</text>
+                            <!--<text class="hot_comment">{{item.valuation}}</text>-->
+                        </view>
+                    </view>
+                </view>
+                <image src="../../images/hot.png" mode="widthFix" class="hotImg"></image>
+            </view>
+        </view>
+  <!--</view>-->
+  <!--推荐分类类别-->
+   <view class="lei1"  wx:for="{{alldata.classifylist}}" wx:key="property"> 
+        <!--<view class="quan">
+            <view class="quan_con">
+              <view class="fl img0">
+                    <image src="{{imgurl}}{{item.c_pic}}" mode="widthFix"></image>
+              </view>
+              <text class="fl lei_fl">{{item.classify_name}}</text>
+              <text class="fr"></text>
+            </view>
+        </view>-->
+        <view class="hot_list">
+            <view class="hot_wrap {{index%2? 'no_rm':''}}" wx:for="{{item.product}}" wx:key="property">
+                <view data-goods_id="{{item.goods_id}}" bindtap="getinfo">
+                    <view class="hot_img"><image src="{{pro_imgurl}}{{item.goods_thumb}}" mode="widthFix" ></image></view>
+                    <view class="hot_txt">
+                        <view class="hot_name">{{item.goods_name}}</view>
+                        <view class="hot_pri">
+                            <text class="hot_price">￥{{(item.promote_price-0)?item.promote_price:item.price}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        
+   </view>     
+  <toast hidden="{{aa}}" duration="1000" bindchange="toastHide">
+   {{gets}}
+</toast>
+  <toast hidden="{{aa}}" duration="1000" bindchange="toastHide">
+    {{gets}}
+</toast>
+  <!--*********************回到顶部-->
+  <view class="com-widget-goTop" bindtap="goTop" wx:if="{{floorstatus}}">
+      <view class="icon-gotop">
+          顶部
+      </view>
+  </view>
+  <!--客服-->
+  <!-- <contact-button type="default-light" size="25" session-from="weapp"></contact-button> -->
 </scroll-view>

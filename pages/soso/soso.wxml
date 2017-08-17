@@ -1,0 +1,55 @@
+<view id="bigWap">
+  <form bindsubmit="formSubmit">
+    <view class="search">
+      <text></text>
+      <input placeholder="输入您想要的商品" name="goods_name" focus confirm-type="done" placeholder-class="cd9" />
+      <button type="default" hover-class="button-hover" formType="submit">搜索</button>
+    </view>
+  </form>
+  <view class="promote">
+    <text class="bt">推荐搜索</text>
+    <view class="pro_wrap">
+      <view bindtap="sotolist" wx:for="{{hotname}}" wx:key="property" data-name="{{item.name}}"> {{item.name}}</view>
+    </view>
+  </view>
+  <!--热卖商品-->
+  <!--<view class="hot-products">
+        <text class="wraper bt">热卖商品</text>
+        <view class="wraper hot-list" wx:for="{{search}}" wx:key="property">
+            <view class="hot-img" data-goods_id="{{item.goods_id}}" bindtap="getinfo" >
+                <image src="{{item.goods_thumb}}" mode="widthFix"></image>
+            </view>
+            <view class="hot-right">
+                <view class="hot-name">{{item.goods_name}}</view>
+                <view class="hot-dec">{{item.description}}</view>
+                <view class="hot-hui">限时特惠</view>
+                <view class="hot-price">
+                    <text class="price1">¥{{(item.promote_price-0)?item.promote_price:item.price}}</text>
+                    <text class="price2">¥{{item.price}}</text>
+                    <text class="ly">评论{{item.valuation}}条</text>
+                </view>
+            </view>
+        </view>
+    </view> -->
+  <!--搜索结果列表-->
+  <!--<view class="sear-list">
+        <view class="sear-item" hover-class="item-hover">
+            空调
+        </view>
+        <view class="sear-item" hover-class="item-hover">
+            空调
+        </view>
+        <view class="sear-item" hover-class="item-hover">
+            空调
+        </view>
+        <view class="sear-item" hover-class="item-hover">
+            空调
+        </view>
+        <view class="sear-item" hover-class="item-hover">
+            空调
+        </view>
+    </view>-->
+</view>
+<toast hidden="{{aa}}" duration="1000" bindchange="toastHide">
+  {{gets}}
+</toast>

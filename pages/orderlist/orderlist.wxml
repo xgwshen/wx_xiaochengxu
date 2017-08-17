@@ -1,0 +1,111 @@
+<view wx:if="{{(shoplist==1)}}"> 
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+          加载中...
+    </loading>
+</view>
+<view wx:else>
+  <view class="order_top">
+      <view class="order_main">
+          <view class="{{classs==0? 'order0':'' }}"  bindtap="statusTab" data-size="0"><text>全部</text></view>
+          <view class="{{classs==6? 'order0':'' }}"  bindtap="statusTab" data-size="6"><text>待付款</text></view>
+          <view class="{{classs==2? 'order0':'' }}"  bindtap="statusTab" data-size="2"><text>待发货</text></view>
+          <view class="{{classs==3? 'order0':'' }}"  bindtap="statusTab" data-size="3"><text>待收货</text></view>
+          <view class="{{classs==1? 'order0':'' }}"  bindtap="statusTab" data-size="1"><text>待评价</text></view>
+      </view>
+  </view>
+  <!--列表-->
+  <view class="order_list" wx:if="{{orderlist.length}}">
+
+      <view class="order_con" wx:for="{{orderlist}}">
+      <view bindtap="orderinfo" data-id="{{item.id}}">
+        <!--for start 订单开始-->
+          <view class="order_dian">
+              <view class="left">
+                  <view class="left_img"><image src="../../images/sale_logo.png" mode="widthFix"></image></view>
+                  <view class="left_dian_name"></view>
+              </view>
+              <!--已付款之后才用订单状态-->
+              <view class="right" wx:if="{{(item.is_play) == 1 }}">
+                  <view class="right" wx:if="{{(item.orderstatus) == 1 }}">已发货</view>
+                  <view class="right" wx:elif="{{item.orderstatus == 2}}">退款中</view>
+                  <view class="right" wx:elif="{{item.orderstatus == 3}}">已签收</view>
+                  <view class="right" wx:elif="{{item.orderstatus == 4}}">已取消</view>
+                  <view class="right" wx:elif="{{item.orderstatus == 5}}">已完成</view>
+                  <view class="right" wx:else>已付款</view>
+              </view>
+              <view class="right" wx:else> 待付款 </view>
+          </view>
+          <view class="order_middle" wx:for="{{item.info}}">
+              <view class="middle_img">
+                  <image src="{{prcurl}}{{item.goods_thumb}}" mode="widthFix"></image>
+              </view>
+              <view class="middle_center">
+                  <view class="middle_name">
+                      {{item.goods_name}}
+                  </view>
+                  <!--<view class="middle_color">{{item.colour_name}}{{item.norms_name}}</view>-->
+                  <view class="detail_right">
+                      <view class="detail_ml">单价</view>
+                      <view class="middle_price">￥{{item.price*item.number}}</view>
+                  </view>
+                  <view class="middle_right">  
+                      <view class="middle_hui">满减特惠</view>
+                      <view class="middle_number">x{{item.number}}</view>
+                  </view>
+              </view>
+              
+          </view>
+          <view class="all_price">
+            <view wx:if="{{item.favorable-0}}">已优惠{{item.favorable}}</view>
+              共{{item.count}}件，合计：{{item.zj}}
+          </view>
+      </view>
+          <view  wx:if="{{(item.is_play) == 1 }}">
+                  <view class="order_bottom"  wx:if="{{(item.orderstatus) == 1 }}">
+                      <view class="order_pay" bindtap="affirm" data-order_id="{{item.id}}" data-index="{{index}}">确认收货</view>
+                      <view class="order_cancel" bindtap="express" data-order_id="{{item.orderid}}">查看物流</view>
+                  </view>
+
+                  <view class="order_bottom"  wx:elif="{{item.orderstatus == 2}}">
+                      <view class="order_pay">取消退款</view>
+                  </view>
+
+                  <view class="order_bottom"  wx:elif="{{item.orderstatus == 3}}">
+                      <!--评价之后就不出现了-->
+                      <view class="order_pay" bindtap="eval" data-order_id="{{item.id}}">去评价</view>
+                      <view class="order_cancel" bindtap="express" data-order_id="{{item.orderid}}">查看物流</view>
+                  </view>
+                  <view class="order_bottom"  wx:elif="{{item.orderstatus == 4}}">
+                      
+                  </view>
+                  <view class="order_bottom"  wx:elif="{{item.orderstatus == 5}}">
+                      <view class="order_pay">订单已完成</view>
+                      <view class="order_cancel" bindtap="express" data-order_id="{{item.orderid}}">查看物流</view>
+                  </view>    
+                  <view class="order_bottom"  wx:else>
+                      <view class="order_pay">待发货</view>
+                  </view>
+                  
+          </view>
+          <view  wx:else> 
+                  <view class="order_bottom" >
+                      <view class="order_pay" bindtap="getaffirm" data-order="{{item.orderid}}">立即支付</view>
+                      <view class="order_cancel" bindtap="cancel" data-order_id="{{item.id}}" data-index="{{index}}">取消订单</view>
+                  </view>
+          </view>
+        <!--for end 订单开始-->
+      </view>
+
+  </view>
+
+  <view class="order_list" wx:else>
+        <view class="nodata1">暂无订单</view>
+        <view class="nodata2">雄商教育提供技术支持</view>
+  </view>
+</view>
+<!--列表-->
+
+
+<toast hidden="{{aa}}" duration="1000" bindchange="toastHide">
+   {{gets}}
+</toast>

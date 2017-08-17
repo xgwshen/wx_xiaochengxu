@@ -1,0 +1,38 @@
+
+  <view class="top_nav">
+      <view class="{{classs==1? 'top_navbar_check':'' }}" bindtap="statusTab" data-size="1"><text>待使用</text></view>
+      <view class="{{classs==2? 'top_navbar_check':'' }}" bindtap="statusTab" data-size="2"><text>已过期</text></view>
+      <view class="{{classs==3? 'top_navbar_check':'' }}" bindtap="statusTab" data-size="3"><text>已使用</text></view>
+  </view>
+
+  <view class="coupon" wx:if="{{status}}">
+      <!--待使用-->
+      <view class="coupon_list" wx:for="{{userfav}}" wx:key="ufk">
+          <view wx:if="{{(item.is_out) == 1 }}">
+              <image src="../../images/quan2.jpg" mode="widthFix"></image>
+          </view>
+          <view wx:else >
+              <image src="../../images/quan2.jpg" mode="widthFix" wx:if="{{(item.is_past) == 1}}"></image>
+              <image src="../../images/quan1.jpg" mode="widthFix"  wx:else ></image>
+          </view>
+          <!--<view class="coupon_list_date">使用期限：{{item.start_addtime}}～{{item.end_addtime}}</view>-->
+          <!--价格-->
+          <view class="price">￥<text>{{item.act_type_ext}}</text></view>
+          <view class="condition">
+              <view wx:if="{{(item.is_out) == 1 }}">
+                  <!-- <view class="state2" >已使用</view> -->
+              </view>
+              <view wx:else>
+                  <view class="state" wx:if="{{(item.is_past) == 1}}"><!--纽慕--></view>
+                  <view class="state" wx:else ><!--纽慕--></view>
+              </view>
+              <view class="state2">无门槛优惠券</view>
+          </view>
+      </view>
+  </view>
+  <view class="coupon" wx:else >
+      <view class="nodata1">无可用优惠券</view>
+      <view class="nodata2">雄商教育提供技术支持</view>
+  </view>
+
+

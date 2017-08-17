@@ -1,0 +1,47 @@
+.ipwrap{
+    background: #fff;
+    padding: 20rpx 0 0;
+    font-size: 28rpx;
+    color: #1c2951;
+    line-height: 44rpx;
+    margin-bottom: 20rpx;
+}
+.ipwrap .name,.ipwrap .address,.ipwrap .addr-slec{
+    padding: 0 5%;
+}
+.ipwrap .addr-slec{
+    margin-top: 20rpx;
+    border-top: 2rpx solid #e5e5e5;
+    color: #999;
+    line-height: 80rpx;
+    overflow: hidden;
+}
+.ipwrap .addr-slec .left{
+    float: left;
+    overflow: hidden;
+}
+.ipwrap .addr-slec .left label{
+  display: inline-block;
+}
+.ipwrap .addr-slec .right{
+    float:right;
+    overflow: hidden;
+}
+.ipwrap .right view{
+    float: right;
+}
+.ipwrap .right .dele{
+    margin-left: 20rpx;
+}
+.addip{
+    padding: 0 5%;
+}
+.addip .btn{
+    width: 40%;
+    line-height: 80rpx;
+    background: #d70a1d;
+    font-size: 32rpx;
+    text-align: center;
+    color: #fff;
+    border-radius: 10rpx;
+}

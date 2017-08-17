@@ -1,0 +1,214 @@
+view{
+  font-size: 28rpx;
+  color: #1c2951;
+}
+/*商品信息*/
+.goods{
+  padding: 35rpx 5%;
+  height: 150rpx;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+}
+.goods_img{
+  float: left;
+  width: 150rpx;
+  height: 150rpx;
+  position: relative;
+  border: 2rpx solid #e5e5e5;
+  overflow: hidden;
+  margin-right: 40rpx;
+}
+.goods_img image{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.goods_info{
+  float: left;
+  line-height:34rpx;
+}
+goods_info .state{
+  margin-bottom: 10rpx;
+}
+goods_info .state text{
+  color: #ff4b00;
+}
+.goods_info .grayinfo{
+  color: #999;
+}
+/*物流信息*/
+.logistics_box{
+    background: #fff;
+    overflow: hidden;
+}
+.logistics_offer{
+  padding: 0 5%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.logistics_offer .logistics_offer_img{
+  width: 60rpx;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-right: 10rpx;
+}
+.logistics_offer .logistics_offer_img image{
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.logistics_offer .logistics_offer_txt{
+  float: left;
+}
+.logistics_offer .logistics_offer_txt text{
+  color: #d70a1d;
+}
+.logistics_offer .logistics_offer_btn{
+  float: right;
+  width: 24rpx;
+  height: 100%;
+  background: url(https://www.hzjkd.com/xcx/images/up.png) no-repeat right center;
+  background-size: 24rpx;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+/*物流列表*/
+.logistics_list{
+  padding: 0 5% 0 10%;
+  padding-top: 40rpx;
+}
+.logistics{
+  padding: 40rpx 0 0 6%;
+  position: relative;
+  border-left: 2rpx solid #e5e5e5;
+}
+.logistics .logistics_date{
+  padding-bottom: 30rpx;
+  margin-top: 10rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+.logistics_addr,.logistics_date{
+  color: #999;
+}
+.logistics .logistics_date_nobor{
+  border-bottom: 0;
+}
+.quan1{
+  width: 24rpx;
+  height: 24rpx;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  top: 40%;
+}
+.logistics_notop{
+  padding-top: 0;
+}
+.logistics_notop .quan1{
+  background: #d70a1d;
+  width: 40rpx;
+  height: 40rpx;
+  top: 0;
+}
+.logistics_notop .logistics_addr,.logistics_notop .logistics_date{
+  color: #d70a1d;
+}
+/*你可能还想买*/
+.tuijian{
+  padding: 0 5%;
+  overflow: hidden;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.tuijian  .line_center{
+  overflow: hidden;
+  display: inline-block;
+  padding-left: 44rpx;
+  position: relative;
+}
+.tuijian image{
+  position: absolute;
+  width: 34rpx;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.tuijian .line{
+  width: 30%;
+  height: 2rpx;
+  background: #e5e5e5;
+  margin-top: 39rpx;
+  float: left;
+}
+.tuijian .line2{
+  float: right;
+}
+/*商品列表3*/
+.tuijian_pro{
+  padding: 0 5%;
+  overflow: hidden;
+  display: flex;display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.pro_list{
+  width: 49%;
+  margin-right: 2%;
+}
+.pro_list_img{
+  background: #fff;
+  overflow: hidden;
+  height: 306rpx;
+  position: relative;
+}
+.pro_list_img image{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.pro_list_name{
+  margin: 18rpx 0 10rpx;
+  line-height: 38rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+}
+.price{
+  color: #d70a1d;
+  margin-bottom: 20rpx;
+  font-size: 36rpx;
+}
+.price text{
+  color: #999;
+  font-size: 28rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+

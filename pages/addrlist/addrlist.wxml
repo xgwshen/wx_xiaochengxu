@@ -1,0 +1,23 @@
+<radio-group class="radio-group" bindchange="radioChange" >
+    <view class="ipwrap" wx:for="{{addrlist}}" wx:key="property">
+      <view  bindtap="checks" data-index="{{index}}">
+        <view class="name">{{item.name}}  {{item.tel}}</view>
+        <view class="address">{{item.province}} {{item.city}} {{item.county}} {{item.address}}</view>
+      </view>
+        <view class="addr-slec">
+            <view class="left">
+                <label>
+                    <radio value="{{index}}"  checked="{{item.default ? true: false}}" color="#d70a1d"/>
+                    <text>{{item.default ? '已设为默认': '设为默认'}}</text>
+                </label>
+            </view>
+            <view class="right">
+                <view class="dele" bindtap="del" data-index="{{index}}">删除</view> 
+                <view class="bianji" bindtap="toeditip" data-index="{{index}}">编辑</view>
+            </view>
+        </view>
+    </view>
+</radio-group>
+<view class="addip" wx:if="{{addrlist[0].name}}">
+    <view class="btn" bindtap="toeditip">添加地址</view>
+</view>

@@ -1,0 +1,262 @@
+.aa{
+    width: 100%;
+    height: 100%;
+    line-height:50rpx;
+    text-align:center;
+    position: relative;
+    color: #babcc0;
+}
+.aa .txt1{
+  font-size:36rpx;
+  margin-top: 184rpx;
+}
+.aa .txt2{
+  font-size:28rpx;
+  margin-top: 4rpx;
+}
+.aa .txt3{
+  font-size:30rpx;
+  margin: 30rpx auto 0;
+  width: 150rpx;
+  line-height: 1.6;
+  border: 2rpx solid #d70a1d;
+  color: #d70a1d;
+  border-radius: 8rpx;
+}
+.aa .txt4{
+  font-size:34rpx;
+  margin-top: 400rpx;
+}
+/*品牌*/
+.box{
+    padding-bottom: 120rpx;
+}
+.list{
+    background: #efeff4;
+    overflow: hidden;
+    font-size: 30rpx;
+    color: #1c2951;
+}
+.top{
+    height: 90rpx;
+    line-height: 90rpx;
+    overflow: hidden;
+    padding-left: 5%;
+    background: #fff;
+}
+.top .top_brand{
+    overflow: hidden;
+    line-height: 90rpx;
+}
+.top .top_brand .top_band_img{
+    width: 200rpx;
+    height: 90rpx;
+}
+.top .top_brand .top_band_img image{
+    width: 100%;
+    margin-top: 27rpx;
+}
+/*产品信息*/
+.middle-box{
+  position: relative;
+  width: 100%;
+  height: 260rpx;
+  border-top: 1rpx solid #e5e5e5;
+  overflow: hidden;
+}
+.middle,.middle .check_one,.middle .pro_img{
+    height:240rpx;
+}
+.middle{
+    padding: 0 5%;
+    width: 90%;
+    height: 260rpx;
+    overflow: hidden;
+    background: #fff;
+    /*margin-bottom: 6rpx;*/
+    
+}
+.middle .check_one{
+    width: 9%;
+    float: left;
+    overflow: hidden;
+    position:relative;
+}
+.middle,.posit{
+    position: absolute;
+    right: 0;top: 0;
+}
+.posit{
+  line-height: 260rpx;
+  right: 0;
+  color:#fff;
+  width:100px;
+  text-align:center;
+  background:#d70a1d;
+}
+.middle .check_one checkbox{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -wqebkit-transform: translateY(-50%);
+}
+.middle .check_one label{
+  display: block;
+  height: 100%;
+}
+.middle .check_one .check_icon,.middle .check_one .check_icon_checked{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.middle .pro_img{
+    width: 160rpx;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.middle .pro_img image{
+    width: 90%;
+    height: 160rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.middle .pro_info{
+    width: 65%;
+    float: right;
+    padding-top:26rpx;
+}
+.pro_info .pro_detail{
+  overflow: hidden;
+  margin-bottom: 8rpx;
+}
+ .pro_detail .pro_ml{
+   overflow: hidden;
+   float: left;
+   color: #babcc0;
+   font-size: 30rpx;
+ }
+.pro_detail .price{
+    overflow: hidden;
+    color: #d70a1d;
+    float:right;
+}
+.middle .pro_info .pro_name{
+    line-height: 36rpx;
+    height: 77rpx;
+    overflow: hidden;
+    margin-bottom: 8rpx;
+}
+.middle .pro_info .pro_pricebox{
+    width: 100%;
+    overflow: hidden;
+    line-height: 50rpx;
+}
+.pro_pricebox .pur_num{
+    overflow: hidden;
+    float: left;
+    color: #babcc0;
+}
+.middle .pro_info .number{
+  overflow: hidden;
+  border: 2rpx solid #babcc0;
+  border-radius: 6rpx;
+  width: 164rpx;
+  height: 48rpx;
+  float: right;
+  
+}
+.middle .pro_info .number .good_num_red,.middle .pro_info .number .good_num_val,.middle .pro_info .number .good_num_add{
+  float: left;
+  line-height: 48rpx;
+  text-align: center;
+  color: #1c2951;
+}
+.middle .pro_info .number .good_num_red{
+  width: 48rpx;
+  font-size: 34rpx;
+  border-right: 2rpx solid #babcc0;
+}
+.middle .pro_info .number .good_num_val{
+  width: 64rpx;
+  font-size: 30rpx;
+}
+.middle .pro_info .number .good_num_add{
+  width: 48rpx;
+  font-size: 34rpx;
+  border-left: 2rpx solid #babcc0;
+}
+/*底部结算*/
+.bottom{
+    width: 100%;
+    height: 100rpx;
+    overflow: hidden;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+}
+.bottom .check_all{
+    float: left;
+    line-height: 100rpx;
+    position: relative;
+    padding-left:11%;
+    overflow: hidden;
+}
+.bottom .check_all checkbox{
+    width: 36rpx;
+    border-radius: 50%;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+}
+.check_all{
+    height: 100rpx;
+    float: left;
+    font-size: 30rpx;
+    padding-left: 5%;
+}
+.check_all text{
+    margin-left: 20rpx;
+}
+.check_all icon{
+  position: absolute;
+  left:25%;
+  margin-top:12px;
+}
+.bottom .buy_btn{
+    float: right;
+    width: 30%;
+    height: 100rpx;
+    line-height: 100rpx;
+    background: #d70a1d;
+    color: #fff;
+    text-align: center;
+    font-size: 34rpx;
+}
+.bottom .buy_btn text{
+    font-size: 28rpx;
+}
+.bottom .money{
+    float: right;
+    padding-top: 16rpx;
+    font-size: 30rpx;
+    margin-right: 28rpx;
+}
+.bottom .money .money_all{
+    line-height: 38rpx;
+}
+.bottom .money .money_all text{
+    color: #d70a1d;
+}
+.bottom .money .txt{
+    font-size: 26rpx;
+    text-align: left;
+    color: #babcc0;
+}

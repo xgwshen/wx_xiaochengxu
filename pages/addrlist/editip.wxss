@@ -1,0 +1,33 @@
+.section{
+    padding: 0 5%;
+    border-bottom: 2rpx solid #e5e5e5;
+    background: #fff;
+    font-size: 30rpx;
+    line-height: 90rpx;
+    color: #1c2951;
+    overflow: hidden;
+}
+.section .section__title{
+    float: left;
+    width: 198rpx;
+}
+.section input{
+    height: 90rpx;
+    font-size: 28rpx;
+    font-family: "微软雅黑";
+}
+.section .section__addr{
+  background:url(https://www.stokke-china.com/xcx/images/up.png) no-repeat right center;
+  background-size:24rpx;
+}
+.btn-area{
+    margin-top: 40rpx;
+    padding: 0 5%;
+}
+.btn-area button{
+    padding: 0;
+    margin: 0;
+    background: #d70a1d;
+    color: #fff;
+    font-size: 34rpx;
+}

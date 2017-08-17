@@ -1,0 +1,36 @@
+
+
+<view class="coupon" wx:if="{{status}}">
+    <!--待使用-->
+    <view wx:for="{{userfav}}"  >
+        <view class="coupon_list" wx:if="{{allprice >= (item.min_amount)}}"   bindtap="favs" data-favoraprice="{{item.act_type_ext}}" data-id="{{item.fav_id}}">
+            <view >
+                <image src="../../images/quan1.jpg" mode="widthFix" ></image>
+            </view>
+            <!--<view class="coupon_list_date">使用期限：{{item.start_addtime}}～{{item.end_addtime}}</view>-->
+            <view class="price">￥<text>{{item.act_type_ext}}</text></view>
+            <view class="condition">
+                <!--<view class="state" >STOKKE</view>-->
+                <view class="state2">无门槛优惠券</view>
+            </view>
+        </view>
+    <!--结束-->
+    <!--无效-->
+        <view class="coupon_list"  wx:else>
+            <view >
+                <image src="../../images/quan2.jpg" mode="widthFix"></image>
+            </view>
+            <!--<view class="coupon_list_date">使用期限：{{item.start_addtime}}～{{item.end_addtime}}</view>-->
+            <view class="price">￥<text>{{item.act_type_ext}}</text></view>
+            <view class="condition">
+                <view class="state2">无门槛优惠券</view>
+            </view>
+        </view>
+        <!--无效结束-->
+      </view>
+    
+</view>
+<view class="coupon" wx:else >
+    <view class="nodata1">无可用优惠券</view>
+      <view class="nodata2">雄商教育提供技术支持</view>
+</view>

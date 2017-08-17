@@ -1,0 +1,47 @@
+<!--product/index.wxml-->
+<view class="top">
+      <view class="top_main">
+            <view class="search">
+                <text></text>
+                <input placeholder="输入您想要的商品" confirm-type="done" placeholder-class="cd9" bindfocus="tososo"/>
+                <view class="button" hover-class="button-hover" bindtap="tososo">搜索</view>
+            </view>
+            <!--排序-->
+            <!--<view class="top_sort">
+                    <view class="top_sort_list">
+                        <view class="sort_left" bindtap="sortshow">{{zhongsort}}<image src="../../images/up.png" mode="widthFix" class="{{showView?'':'img_open'}}"></image></view>
+                    </view>
+            </view>-->
+      </view>
+</view>
+<view class="prolist">
+        <view wx:for="{{productlist.data}}" wx:key="property" class="pro_sort_list" data-goods_id="{{item.goods_id}}" bindtap="getinfo">
+                <view class="pro_sort_left">
+                        <image src="{{productlist.imgurl}}{{item.goods_thumb}}" mode="widthFix" />
+                </view>
+                <view class="pro_sort_right">
+                        <view class="pro_sort_name">{{item.goods_name}}</view>
+                        <!--<view class="pro_sort_decr">425g</view>-->
+                        <view class="hot-hui">限时特惠</view>
+                        <view class="pro_sort_price">
+                        <view class="price_left">￥{{(item.promote_price-0)?item.promote_price:item.price}}</view>
+                        <view class="price_right">评论{{item.valuation}}条</view>
+                        </view>
+                </view>
+        </view>
+</view>
+<!--排序-->
+<!--<view class="sort_list_selected sort_list_selected_show{{showView?'sort_list_selected':''}}" >
+        <view class="selected1" bindtap="sort" data-size="all" data-zhong="综合排序" class="{{sort==='all'?'icon_show':''}}">
+            综合排序 <icon type="success_no_circle" color="#c9e019" size="14" ></icon>
+        </view>
+        <view class="selected1" bindtap="sort" data-size="hot" data-zhong="热度" class="{{sort==='hot'?'icon_show':''}}">
+            热度<icon type="success_no_circle" color="#c9e019" size="14"></icon>
+        </view>
+        <view class="selected1" bindtap="sort" data-size="pricehight" data-zhong="价格最高" class="{{sort==='pricehight'?'icon_show':''}}">
+            价格最高<icon type="success_no_circle" color="#c9e019" size="14"></icon>
+        </view>
+        <view class="selected1" bindtap="sort" data-size="pricelow" data-zhong="价格最低" class="{{sort==='pricelow'?'icon_show':''}}">
+            价格最低<icon type="success_no_circle" color="#c9e019" size="14"></icon>
+        </view>
+</view>-->

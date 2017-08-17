@@ -1,8 +1,24 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+/* pages/logs/logs.wxss */
+view{
+  color: #1c2951;
 }
-.log-item {
-  margin: 10rpx;
+.log_img{
+  width: 62%;
+  margin: 238rpx auto 0;
+}
+.txt1{
+  font-size: 42rpx;
+  text-align: center;
+  font-family: '宋体';
+  margin-top: 34rpx;
+}
+.btn{
+  width: 640rpx;
+  height: 82rpx;
+  font-size: 38rpx;
+  line-height: 82rpx;
+  text-align: center;
+  margin: 345rpx auto 0;
+  border: 5rpx solid #1c2951;
+  border-radius: 82rpx;
 }

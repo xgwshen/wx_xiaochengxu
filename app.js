@@ -7,7 +7,7 @@ App({
     // wx.setStorageSync('logs', logs)
     var that=this
     that.getUserInfo(function(userInfo){
-
+      console.log(userInfo)
     })
     wx.checkSession({
       success:function(){
@@ -79,6 +79,6 @@ App({
   //定义全局变量
   globalData: {
     userInfo: null,
-    httpsurl:"http://xgwshenxcx.com/",
+    httpsurl:"http://www.xgwshenxcx.com/",
   }
 })

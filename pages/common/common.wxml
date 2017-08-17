@@ -1,0 +1,5 @@
+<view class="aa">
+    <view class="nodata1">{{messge}}</view>
+    <view class="nodata2">期待您的再次光临~</view>
+    <view class="nodata3">雄商教育提供技术支持</view>
+</view>

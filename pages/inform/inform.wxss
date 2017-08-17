@@ -1,0 +1,33 @@
+view{
+  font-size: 32rpx;
+  color: #1c2951;
+}
+/*列表*/
+.inform{
+  padding: 0 4%;
+  overflow: hidden;
+}
+.inform_list{
+  margin-top: 30rpx;
+  padding: 30rpx 0;
+  border-radius: 14rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.inform_list .title{
+  font-size: 34rpx;
+  margin-bottom: 14rpx;
+  text-align: center;
+  color: #000;
+}
+.inform_list view{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  color: #808080;
+  text-align: justify;
+}
+.inform_list view image{
+  width: 100%;
+  margin-top: 26rpx;
+  margin-bottom: 26rpx;
+}

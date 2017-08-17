@@ -1,0 +1,328 @@
+/*无默认地址*/
+.logistics{
+  padding: 40rpx 0 0 6%;
+  position: relative;
+  border-left: 2rpx solid #e6e6e6;
+}
+.logistics .logistics_date{
+  padding-bottom: 30rpx;
+  margin-top: 10rpx;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.logistics view{
+  color: #d70a1d;
+  font-size:30rpx;
+  margin: auto
+}
+.logistics .logistics_date_nobor{
+  border-bottom: 0;
+}
+.ordercode{
+  margin: 5%
+}
+.ordercode view{
+  color: #999;
+  font-size:30rpx
+}
+.no_addr{
+  width: 90%;
+  overflow: hidden;
+  padding: 20rpx 5%;
+  background: #fff;
+}
+.no_addr .noaddr_right{
+  float: right;
+  width: 86%;
+}
+.no_addr .no_addr_selec{
+  width: 100%;
+  overflow: hidden;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.no_addr .no_addr_selec .no_addr_r{
+  float: right;
+  width: 24rpx;
+  text-indent: -9999em;
+  background: url(https://www.stokke-china.com/xcx/images/up.png) no-repeat right center;
+  background-size: 24rpx;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+.no_addr  .no_addr_txt{
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  color: #f65f04;
+}
+/*地址*/
+.white{
+  overflow: hidden;
+  background: #fff;
+  margin-top: 30rpx;
+}
+.addr_main{
+  height: 150rpx;
+  overflow: hidden;
+  padding: 0 4%;
+  color:#1c2951;
+}
+.left_img,.right_img{
+  width: 9%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.right_img{
+  float: right;
+}
+.left_img icon,.left_img image,.right_img image{
+  width: 36rpx;
+  height: 36rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.left_img icon,.left_img image{
+ left: 0;
+}
+.right_img image{
+  right: 0;
+}
+.addr_center{
+  width: 80%;
+  float: left;
+  margin-top: 28rpx;
+}
+.addr_center .name{
+  font-size: 34rpx;
+  line-height: 38rpx;
+  margin-bottom: 16rpx;
+}
+.addr_center .ip{
+  font-size: 28rpx;
+  line-height: 32rpx;
+}
+/*购买的产品信息*/
+.order_con{
+    background: #fff;
+    font-size: 28rpx;
+    color: #1c2951;
+    padding: 0 5%;
+}
+.order_dian{
+    line-height: 90rpx;
+    overflow: hidden;
+    border-bottom: 2rpx solid #e6e6e6;
+}
+.order_dian .left .left_img{
+    width: 170rpx;
+    height: 90rpx;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.order_dian .left .left_img image{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.order_dian .left .left_dian_name{
+    float: left;
+}
+.order_dian .right{
+    float: right;
+    color: #f65f04;
+}
+/*中间*/
+.order_middle{
+    overflow: hidden;
+    height: 190rpx;
+    padding: 32rpx 0;
+}
+.middle_img{
+    width: 26%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.middle_img image{
+    width: 97%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.middle_center{
+    float: right;
+    width: 70%;
+}
+.middle_center .middle_name{
+    line-height: 36rpx;
+    text-align: left;
+    overflow: hidden;
+}
+.middle_center .middle_norms{
+    margin-top: 18rpx;
+}
+.middle_price{
+  color: #d70a1d;
+  float: right;
+}
+.middle_bottom{
+  width: 100%;
+  overflow: hidden;
+  margin: 20rpx 0 0;
+}
+.middle_hui{
+    width: 130rpx;
+    float: left;
+    font-size: 24rpx;
+    background: #d70a1d;
+    color: #fff;
+    line-height: 38rpx;
+    text-align: center;
+}
+.middle_number{
+    float: right;
+    line-height: 38rpx;
+}
+/*购买数量*/
+.line_height{
+  width: 90%;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 30rpx;
+  padding: 0 5%;
+  margin-top: 0;
+  color: #999;
+}
+.buy_num .right{
+  overflow: hidden;
+  /*border: 2rpx solid #e5e5e5;*/
+  border-radius: 6rpx;
+  /*width: 164rpx;*/
+  height: 48rpx;
+  margin-top:20rpx;
+}
+.buy_num .right .good_num_red,.buy_num .right .good_num_val,.buy_num .right .good_num_add{
+  float: left;
+  line-height: 48rpx;
+  text-align: center;
+  color: #333;
+}
+.buy_num .right .good_num_red{
+  width: 48rpx;
+  font-size: 34rpx;
+  border-right: 2rpx solid #e6e6e6;
+}
+.buy_num .right .good_num_val{
+  width: 64rpx;
+  font-size: 30rpx;
+}
+.buy_num .right .good_num_add{
+  width: 48rpx;
+  font-size: 34rpx;
+  border-left: 2rpx solid #e6e6e6;
+}
+/*发票*/
+.fapiao{                 display: none;  }
+/*留言*/
+.ly text{
+  display: block;
+  height:90rpx;
+  border: 0;
+  line-height:90rpx;
+  background: #e6e6e6;
+  border-radius: 8rpx;
+  padding: 0 10rpx;
+}
+.ly .right .gray_input{
+  color: #999;
+}
+.lyval{
+  margin-bottom: 20rpx;
+}
+/*优惠券*/
+.quan .right{
+  color: #999;
+}
+.line_height .left,.total .left{
+  float: left;
+  font-size: 30rpx;
+}
+.line_height .right,.total .right{
+  float: right;
+  font-size: 30rpx;
+}
+.total{
+  padding: 20rpx 5% 0;
+  overflow: hidden;
+  font-size: 30rpx;
+}
+.total .pay{
+  height: 72rpx;
+  line-height: 72rpx;
+  color: #999;
+}
+.total .pay .right{
+  float: right;
+}
+.heji{
+  padding: 0 5%;
+  text-align: right;
+  padding-top: 20rpx;
+  padding-bottom: 24rpx;
+}
+.heji .red{
+  color: #d70a1d;
+}
+/*支付*/
+.add-car{
+  width: 90%;
+  padding: 0 5%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  z-index: 2;
+}
+.add-car view{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  text-align: center;
+  color: #fff;
+  background: #f65f04;
+  border-radius:10rpx;
+}
+.order_bottom{
+    font-size: 28rpx;
+    overflow: hidden;
+    padding:24rpx 6% 24rpx 0;
+}
+.order_bottom view{
+    float: right;
+    width: 152rpx;
+    height: 60rpx;
+    border-radius: 6rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+.order_bottom .order_cancel{
+    border: 2rpx solid #b2b2b2;
+    color: #666;
+    margin-right: 26rpx;
+}
+.order_bottom .order_pay{
+    color: #d70a1d;
+    border: 2rpx solid #d70a1d;
+}
+

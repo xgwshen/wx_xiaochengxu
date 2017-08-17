@@ -1,0 +1,413 @@
+image {
+  width:100%;
+  display:inline-block;
+  overflow:hidden;
+}
+/*banner*/
+.productinfo{
+  padding-bottom: 130rpx;
+}
+.productinfo swiper{
+  width: 100%;
+  height: 750rpx;
+  text-align: center;
+  overflow: hidden;
+  border-top: 2rpx solid #e6e6e6;
+}
+.productinfo swiper image{
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+}
+.good_title{
+  width: 92%;
+  padding: 0 4%;
+  overflow: hidden;
+}
+.good_main{
+  width: 92%;
+  padding: 0 4%;
+}
+.productinfo .good_title .good_name{
+  font-size: 32rpx;
+  color: #1c2951;
+  line-height: 40rpx;
+  padding-top: 30rpx;
+}
+/*.productinfo .good_title .good_dec{
+  font-size: 30rpx;
+  color: #f65f04;
+  line-height: 36rpx;
+}  */
+.productinfo .good_title .good_pri{
+  line-height: 80rpx;
+  overflow: hidden;
+}
+.productinfo .good_pri .good_price1{
+  color: #d70a1d;
+  font-size: 28rpx;
+  float: left;
+  margin-left: -4rpx;
+}
+.productinfo .good_pri .good_price1 text{
+  font-size: 44rpx;
+}
+/*.productinfo .good_pri .good_price2{
+  font-size: 30rpx;
+  color: #f65f04;
+  text-decoration: line-through;
+  float: left;
+}*/
+.productinfo .good_pri .good_number{
+  float: right;
+  font-size: 24rpx;
+  color: #999;
+}
+.productinfo .good_promotion,.productinfo .good_service,.productinfo .good_address,.productinfo .good_yanse,.productinfo .good_num,.productinfo .good_parameter{
+  line-height: 110rpx;
+  font-size: 26rpx;
+  color: #666;
+  overflow: hidden;
+}
+.good_txt{
+  margin-right: 35rpx;
+  float: left;
+}
+/*促销*/
+.productinfo .good_is_promote{
+  font-size: 24rpx;
+  color: #d70a1d;
+}
+.productinfo .good_promotion .ii{
+  float:left;
+  width:70rpx;
+  height: 110rpx;
+  text-align:center;
+  margin-right:14rpx;
+}
+.productinfo .good_promotion .ii image{
+  display: block;
+  margin-top: 36rpx;
+}
+/*服务*/
+.productinfo .good_service .good_service1{
+  display:inline-block;
+  margin-right:20rpx;
+  height:110rpx;
+  position:relative;
+  padding-left:38rpx;
+}
+.productinfo .good_service .good_services{
+  float: left;
+}
+.productinfo .good_service .good_service1 icon{
+  margin-right:14rpx;
+  position:absolute;
+  left:0;
+  top:50%;
+  transform:translateY(-34%);
+  -webkit-transform:translateY(-34%);
+}
+/*地址*/
+.productinfo .good_address .good_address_selec{
+  overflow: hidden;
+}
+.productinfo .good_address .good_address_add{
+  font-size: 32rpx;
+  color: #333;
+  float: left;
+}
+.productinfo .good_address .right{
+  float: right;
+  overflow: hidden;
+}
+.productinfo .good_address .right .good_address_huo,.productinfo .good_address .right  .good_address_btn{
+  float: right;
+}
+.productinfo .good_address .right .good_address_huo{
+  color:#f65f04;
+  margin-right: 10rpx;
+}
+.productinfo .good_address .right  .good_address_btn{
+  font-size: 34rpx;
+  text-indent: -9999px;
+  width: 24rpx;
+  background: url(https://www.stokke-china.com/xcx/images/up.png) no-repeat right center;
+  background-size: 24rpx;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+/*颜色*/
+.productinfo .good_yanse{
+  min-height: 110rpx;
+}
+.productinfo .good_yanses{
+  overflow: hidden;
+  padding-bottom: 30rpx;
+}
+.productinfo .good_yanses .good_yanse0{
+  padding: 0 20rpx;
+  line-height: 50rpx;
+  border-radius: 8rpx;
+  background: #e1dfdf;
+  float: left;
+  color: #666;
+  margin: 30rpx 14rpx 0 0;
+}
+.productinfo .good_yanses .good_yanse0_sel{
+  background: #d70a1d;
+  color: #fff;
+}
+/*数量*/
+.productinfo .good_num{
+  overflow: hidden;
+  height: 110rpx;
+}
+.productinfo .good_num .good_num_box{
+  overflow:hidden;
+  margin-top:30rpx;
+  border:2rpx solid #babcc0;
+  border-radius:6rpx;
+  width:193rpx;
+  height:48rpx;
+}
+.productinfo .good_num .good_num_red,.productinfo .good_num .good_num_val,.productinfo .good_num .good_num_add{
+  float: left;
+  line-height: 48rpx;
+  text-align: center;
+  color: #1c2951;
+}
+.productinfo .good_num .good_num_red{
+  width:50rpx;
+  font-size:36rpx;
+  border-right:2rpx solid #babcc0;
+}
+.productinfo .good_num .good_num_val{
+  width: 89rpx;
+  font-size: 32rpx;
+}
+.productinfo .good_num .good_num_add{
+  width: 50rpx;
+  font-size: 36rpx;
+  border-left: 2rpx solid #babcc0;
+}
+/*参数*/
+.productinfo .good_parameter{
+  min-height: 110rpx;
+  overflow: hidden;
+}
+.productinfo .good_parameter_box{
+  display: none;
+}
+.productinfo .good_parameter_box_show{
+  display: block;
+}
+.productinfo .good_parameter .parameter{
+  width: 100%;
+}
+.productinfo .good_parameter .good_parameter_btn{
+  float: right;
+  width: 24rpx;
+  text-indent: -9999px;
+  background: url(https://www.stokke-china.com/xcx/images/up.png) no-repeat right center;
+  background-size: 24rpx;
+}
+.productinfo .good_parameter .good_parameter_rotate{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+.good_parameter_box{
+  padding-bottom: 20rpx;
+}
+.good_parameter_box .good_parameter_bt{
+  font-size: 32rpx;
+  line-height: 60rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.good_parameter_box .good_parameter_p{
+  overflow: hidden;
+  line-height: 60rpx;
+}
+.good_parameter_box .good_parameter_p .p_left{
+  width: 34%;
+  float: left;
+}
+.good_parameter_box .good_parameter_p .p_right{
+  float: left;
+  color: #333;
+}
+/*评价*/
+.productinfo .good_evaluate{
+  font-size:26rpx;
+  color:#666;
+  min-height: 110rpx;
+}
+.evaluate{
+  width: 92%;
+  padding: 0 4%;
+  line-height: 110rpx;
+  overflow: hidden;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.evaluate .good_evaluate_btn{
+  float: right;
+  overflow: hidden;
+}
+.productinfo .good_evaluate .evaluate .yellow{
+  color: #d70a1d;
+}
+.evaluate .right_bg{
+  float: right;
+  margin-left: 10rpx;
+  width: 24rpx;
+  height: 110rpx;
+  background: url(https://www.stokke-china.com/xcx/images/up.png) no-repeat right center;
+  background-size: 24rpx;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+/*单个评价*/
+.productinfo .good_evaluate_box{
+  font-size:26rpx;
+  color:#666;
+  overflow: hidden;
+}
+.productinfo .good_evaluate_list{
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.productinfo .good_evaluate_list .good_Buyers{
+  overflow: hidden;
+  line-height: 120rpx;
+}
+.productinfo .good_evaluate_list .good_Buyers image,.productinfo .good_evaluate_list .good_Buyers text{
+  display: inline-block;
+}
+.productinfo .good_evaluate_list .Buyers,.productinfo .good_evaluate_list .Buyers_goal{
+  float: left;
+  overflow: hidden;
+}
+.productinfo .good_evaluate_list .Buyers{
+  position: relative;
+}
+.productinfo .good_evaluate_list .Buyers_goal{
+  height: 120rpx;
+}
+.productinfo .good_evaluate_list .Buyers image{
+  width: 70rpx;
+  position:absolute;
+  top:50%;
+  left: 0;
+  transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+}
+.productinfo .good_evaluate_list .Buyers text{
+  margin: 0 30rpx 0 100rpx;
+  float: right;
+  letter-spacing:4rpx;
+}
+.productinfo .good_evaluate_list .Buyers_goal image{
+  width: 36rpx;
+  float: left;
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+}
+.productinfo .good_evaluate_box .Buyers_evaluate{
+  color: #000;
+  line-height: 32rpx;
+}
+/*评价图片*/
+.productinfo .good_evaluate_box .Buyers_evaluate_pic{
+  overflow: hidden;
+  padding: 24rpx 0 14rpx;
+  box-sizing: content-box;
+}
+.productinfo .good_evaluate_box .Buyers_evaluate_pic image{
+  width: 22%;
+  margin-right: 4%;
+  margin-bottom: 10rpx;
+}
+/*评价时间*/
+.productinfo .good_evaluate_box .Buyers_add_time{
+  margin-bottom: 24rpx;
+}
+/*加入购物车*/
+.car-box{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;display: -webkit-flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  z-index: 2;
+}
+.car-box .buy-car{
+  width: 15%;
+  background: #fff;
+}
+.car-box .buy-car .buy-car-img{
+  height: 68rpx;
+  overflow: hidden;
+  position: relative;
+}
+.car-box .buy-car .buy-car-img image{
+  width: 40rpx;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.car-box .buy-car .buy-car-img .num{
+  width: 26rpx;
+  height: 26rpx;
+  line-height: 28rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #ff0000;
+  color: #fff;
+  font-size: 14rpx;
+  position: absolute;
+  right: 16%;
+  top: 10rpx;
+}
+.car-box .buy-car text{
+  font-size: 22rpx;
+  display: block;
+  line-height: 24rpx;
+  color: #666;
+}
+.car-box .add-car,.car-box .buy-btn{
+  font-size: 30rpx;
+  color: #fff;
+}
+.car-box .add-car{
+  width: 46%;
+  background: #e8bf99;
+}
+.car-box .buy-btn{
+  width: 39%;
+  background: #d70a1d;
+}
+/*产品详情*/
+.good_detail{
+  font-size: 28rpx;
+  color: #666;
+}
+.good_detail .detail{
+  padding:10rpx;
+}
+.good_detail image{
+  width: 100%;
+  display: block;
+}
+.good_detail .evaluate .right_bg{
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}

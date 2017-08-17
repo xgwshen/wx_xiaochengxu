@@ -1,0 +1,43 @@
+<view class="wrap">
+    <form  bindsubmit="formSubmit" ><!-- bindreset="formReset"-->
+        <view class="section">
+            <view class="section__title">收货人</view>
+            <input name="name" placeholder="请输入收货人姓名" value="{{address.name}}"/>
+        </view>
+        <view class="section">
+            <view class="section__title">联系电话</view>
+            <input name="tel" placeholder="手机或固话" value="{{address.tel}}" type="number"/>
+        </view>
+        <view class="section">
+            <view class="section__title">省/直辖市</view>
+            <view class="section__addr">
+                <picker mode = selector value="{{index}}"  bindchange="bindChange" range="{{province.title}}"> 
+                  <view class="picker" > {{province.title[index]}} </view> 
+                </picker>
+            </view>
+        </view>
+        <view class="section">
+            <view class="section__title">市</view>
+            <view class="section__addr">
+                 <picker mode = selector value="{{indexcity}}"  bindchange="bindcityChange" range="{{city.title}}"> 
+                  <view class="picker" > {{city.title[indexcity]}} </view> 
+                </picker>
+            </view>
+        </view>
+        <view class="section">
+            <view class="section__title">区/县</view>
+            <view class="section__addr">
+                 <picker mode = selector value="{{indexcounty}}"  bindchange="bindcountyChange" range="{{county.title}}"> 
+                  <view class="picker" > {{county.title[indexcounty]}} </view>
+                 </picker>
+            </view>
+        </view>
+        <view class="section">
+            <view class="section__title">详细地址</view>
+            <input name="address" placeholder="请输入收货人详细地址" value="{{address.address}}"/>
+        </view>
+        <view class="btn-area">
+            <button formType="submit" >保存并使用</button><!--bindtap="toaddrlist"-->
+        </view>
+    </form>
+</view>

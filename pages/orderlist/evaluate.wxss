@@ -1,0 +1,120 @@
+.list_box{
+  background: #fff;
+  margin-bottom: 30rpx;
+}
+.top{
+    width: 92%;
+    padding:0 4%;
+    height: 156rpx;
+    line-height: 156rpx;
+    font-size: 34rpx;
+    color: #1c2951;
+    overflow: hidden;
+    border-bottom: 2rpx solid #e6e6e6;
+}
+.top .top_img{
+  width:150rpx;
+  height: 100%;
+  float:left;
+  position:relative;
+}
+.top .top_img image{
+  width: 96rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.top .txt{
+    float: left;
+}
+.top .fenzhi{
+    float: left;
+    overflow: hidden;
+    margin-left: 14rpx;
+}
+.top .fenzhi image{
+    width: 40rpx;
+    margin-left: 14rpx;
+    margin-top: 58rpx;
+    position: relative;
+}
+.top .fenzhi image .item{
+    left:0;
+    position:absolute;
+    width:40rpx;
+    height:40rpx;
+    top:0;
+}
+.pingjia{
+    padding: 20rpx 4%;
+    line-height: 36rpx;
+    color: #333;
+}
+.pingjia .ping_con{
+  font-size: 32rpx;
+  color: #333;
+}
+.pingjia textarea{
+    height:120rpx;
+    font-size: 30rpx;
+    margin-bottom: 80rpx;
+}
+.pingjia .textarea_place{
+  color: #999;
+  font-size: 30rpx;
+}
+.pingjia image{
+    width:20%;
+}
+.pingjia .chooseImage{
+    width: 140rpx;
+    height: 140rpx;
+    background: url(https://www.stokke-china.com/xcx/images/chooseImage.png) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+}
+.pingjia .choose_tit{
+  display: inline;
+  font-size: 30rpx;
+  position: relative;
+  bottom: 65rpx;
+  left: 20rpx;
+}
+/*匿名*/
+.niming{
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 28rpx;
+    border-top: 2rpx solid #e5e5e5;
+    color: #333;
+}
+.niming checkbox{
+    margin-right: 20rpx;
+}
+.niming label{
+    padding: 0 4%;
+    width: 92%;
+    display: block;
+}
+.niming label text{
+  float: right;
+  color: #999;
+  font-size: 26rpx;
+}
+.sub-btn{
+  width: 100%;
+  padding: 40rpx 0;
+  background: #fff;
+  text-align: right;
+}
+.sub-btn button{
+  width: 80%;
+  display: block;
+  border: 0;
+  border-radius: 8rpx;
+  color: #fff;
+  background: #d70a1d;
+  height: 94rpx;
+}

@@ -1,0 +1,192 @@
+view{
+  color: #1c2951;
+}
+image {
+  width:100%;
+  display:inline-block;
+  overflow:hidden;
+}
+.no-rbor{
+    border-right: 0!important;
+}
+/**/
+.top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 2;
+}
+.search{
+  width: 88%;
+  margin:40rpx auto 40rpx;
+  overflow: hidden;
+}
+.search text{
+  float: left;
+  width: 10%;
+  height: 70rpx;
+  background:#edf0f2 url(https://www.stokke-china.com/xcx/images/soso.png) center center no-repeat;
+  background-size: 40rpx 40rpx;
+  border-top-left-radius: 12rpx;
+  border-bottom-left-radius: 12rpx;
+}
+.search input{
+  width: 72%;
+  font-size: 28rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-top-right-radius: 12rpx;
+  border-bottom-right-radius: 12rpx;
+  float: left;
+  background:#edf0f2;
+}
+.search .cd9{
+  color: #d9d9d9;
+}
+.search .button{
+  width: 16%;
+  padding: 0;margin: 0;
+  background: #d70a1d;
+  color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 0;
+  font-size: 28rpx;
+  border-radius: 12rpx;
+  text-align: center;
+  margin-left: 2%;
+  float: left;
+}
+.button-hover {
+  background-color:#c9e019;
+}
+/*排序*/
+.top_sort{
+  border-top: 2rpx solid #ccc;
+  border-bottom: 2rpx solid #ccc;
+}
+.top_sort_list{
+  overflow: hidden;
+  width: 88%;
+  margin: 0 auto;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+.top_sort_list .sort_left{
+  float: left;
+  width: 33.33%;
+}
+.top_sort_list .sort_left image{
+  width: 24rpx;
+  margin-left: 4%;
+}
+.top_sort_list .sort_left .img_open{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+.top_sort_list .sort_addr{
+  float: left;
+  width: 33.33%;
+}
+.top_sort_list .sort_screen{
+  float: right;
+  width: 33.33%;
+}
+.top_sort_list .sort_addr image,.top_sort_list .sort_screen image{
+  width: 24rpx;
+  margin-right: 4%;
+}
+/*列表*/
+.prolist{
+  padding-top: 180rpx;
+}
+.pro_sort_list{
+  padding:20rpx 6% 20rpx;
+  border-top:1px solid #e6e6e6;
+  overflow:hidden;
+  margin-bottom:20rpx;
+}
+.pro_sort_list .pro_sort_left{
+  float: left;
+  width: 32%;
+  overflow: hidden;
+  position: relative;
+  height: 204rpx;
+}
+.pro_sort_list .pro_sort_left image{
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.pro_sort_list .pro_sort_right{
+  float: right;
+  width: 64%;
+  padding-top: 20rpx;
+  overflow: hidden;
+  font-size:  30rpx;
+}
+.pro_sort_list .pro_sort_right .pro_sort_name{
+  line-height: 36rpx;
+  color: #1c2951;
+}
+.pro_sort_list .pro_sort_right .pro_sort_decr{
+  line-height: 36rpx;
+  color: #333;
+}
+.pro_sort_list .pro_sort_right .hot-hui{
+  width: 146rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  background: #d70a1d;
+  margin-top: 14rpx;
+}
+.pro_sort_list .pro_sort_right .pro_sort_price{
+  overflow: hidden;
+  padding-top: 14rpx;
+}
+.pro_sort_list .pro_sort_right .price_left{
+  float: left;
+  color: #d70a1d;
+}
+.pro_sort_list .pro_sort_right .price_right{
+  float: right;
+  color: #babcc0;
+}
+/*排序选择*/
+.sort_list_selected{
+  position: fixed;
+  top: 242rpx;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.sort_list_selected_show{
+  display: block;
+}
+.sort_list_selected view{
+  line-height: 80rpx;
+  padding:0 5%;
+  border-bottom: 2rpx solid #e6e6e6;
+  font-size: 30rpx;
+  background: #fff;
+}
+.sort_list_selected view icon{
+  float: right;
+  height:20px;
+  margin-top:14rpx;
+  display: none;
+}
+.sort_list_selected .icon_show{
+  color: #c9e019;
+}
+.sort_list_selected .icon_show icon{
+  display: block;
+}

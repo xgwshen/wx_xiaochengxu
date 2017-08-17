@@ -1,0 +1,207 @@
+<!--product/info.wxml 产品详情 -->
+<import src="../../wxParse/wxParse.wxml"/> 
+<!--产品多图以及名称-->
+<view class="productinfo">
+   <swiper indicator-dots="true" indicator-color="#dfddd6" indicator-active-color="#9c9472">
+        <block wx:for="{{productinfo.goods_imgs}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" mode="widthFix" bindload="wxParseImgLoad" bindtap="wxParseImgTap"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--产品介绍-->
+    <view class="good_title">
+        <view class="p1_box">
+            <view class="good_name">{{productinfo.goods_name}}</view>
+            <view class="collection"></view>
+        </view>
+        <!--<view class="good_dec">{{productinfo.description}}</view>-->
+        <view class="good_pri">
+            <view class="good_price1">￥<text>{{(productinfo.promote_price-0) ? productinfo.promote_price:productinfo.price}}</text></view>
+            <!--<view class="good_price2">￥{{productinfo.price}}</view>-->
+            <view class="good_number">库存{{productinfo.goods_number}}</view>
+        </view>
+    </view>
+    <!--规格-->
+    <!-- <view class="good_main good_yanse">
+        <view class="good_txt">规格</view>
+        <view class="good_yanses">
+            <view class="{{nums==index? 'good_yanse0 good_yanse0_sel':'good_yanse0' }}" wx:for="{{productinfo.color_norm.norms.length?productinfo.color_norm.norms:normsarray}}" bindtap="colorSel_norm" data-norm="{{index}}" data-norms_id="{{item.norms_id?item.norms_id:item.attr_id}}" data-norms_val="{{item.norms_val?item.norms_val:item.attr_name}}">{{item.norms_val?item.norms_val:item.attr_name}}</view>
+        </view>
+    </view> -->
+    <!--数量-->
+    <view class="good_main good_num">
+        <view class="good_txt">数量</view>
+        <view class="good_num_box">
+            <view class="good_num_red" bindtap="reduce">-</view>
+            <input class="good_num_val" disabled type="text" value="{{numbers}}"/>
+            <view class="good_num_add" bindtap="add">+</view>
+        </view>
+    </view>
+    <view class="hr_div"></view>
+    <!--促销-->
+    <view class="good_promotion good_main" data-sale="{{productinfo.is_promote}}">
+        <view class="good_txt">促销</view>
+        <view class="good_is_promote">
+              <view class="ii"><image src="../../images/cuxiao.png" mode="widthFix"></image></view>
+              无门槛优惠券20元
+        </view>
+    </view>
+    <view class="line" style="width:92%;margin:0 auto;"></view>
+    <!--服务-->
+    <view class="good_main good_service">
+        <view class="good_txt">服务</view>
+        <view class="good_services">
+            <view class="good_service1"><icon type="success_circle" size="18" color="#d70a1d"/>全场包邮</view>
+        </view>
+    </view>
+    <view class="hr_div"></view>
+    <!--地址-->
+    <!-- 定位功能暂时不做
+    <view class="good_main good_address">
+        <view class="good_txt">送至</view>
+        <view class="good_address_selec">
+            <view class="good_address_add">{{address}}</view>
+            <view class="right" bindtap="mapaddress">
+                <view class="good_address_btn">></view>
+                <view class="good_address_huo">有货</view>
+            </view>
+        </view>
+    </view>-->
+    <!--颜色-->
+    <!--<view class="good_main good_yanse">
+        <view class="good_txt">颜色</view>
+        <view class="good_yanses">
+            <view class="{{num==index? 'good_yanse0 good_yanse0_sel':'good_yanse0' }}"  wx:for="{{productinfo.color_norm.color}}" bindtap="colorSel" data-color="{{index}}" data-color_id="{{item.color_id}}" data-color_val="{{item.color_val}}">{{item.color_val}}</view>
+        </view>
+    </view>-->
+    <!--产品参数-->
+    <!--<view class="good_main good_parameter" bindtap="show">
+        <view class="parameter">
+            参数
+            <view class="good_parameter_btn good_parameter_rotate{{showView?'good_parameter_btn':''}}">></view>
+        </view>
+        <view class="good_parameter_box good_parameter_box_show{{showView?'good_parameter_box':''}}">
+            <view class="good_parameter_txt">
+                <view class="good_parameter_bt">产品信息</view>
+                <view class="good_parameter_p">
+                    <view class="p_left">品牌</view>
+                    <view class="p_right">{{productinfo.brand}}</view>
+                </view>
+                <view class="good_parameter_p">
+                    <view class="p_left">颜色</view>
+                    <view class="p_right">玛莎拉红</view>
+                </view>
+                <view class="good_parameter_p">
+                    <view class="p_left">上市日期</view>
+                    <view class="p_right">{{productinfo.markettime}}</view>
+                </view>
+                <view class="good_parameter_p">
+                    <view class="p_left">产品型号</view>
+                    <view class="p_right">{{productinfo.model}}</view>
+                </view>
+                <view class="good_parameter_p">
+                    <view class="p_left">电源电压（V）</view>
+                    <view class="p_right">{{productinfo.v}}v,{{productinfo.w}}ph</view>
+                </view>
+            </view>
+            <view class="good_parameter_txt">
+                <view class="good_parameter_bt">类目信息</view>
+                <view class="good_parameter_p" wx:for="{{productinfo.attribute}}">
+                    <view class="p_left">{{item.var_title}}</view>
+                    <view class="p_right">{{item.attr_value}}</view>
+                </view>
+            </view>
+            <view class="good_parameter_txt">
+                <view class="good_parameter_bt">包装信息</view>
+                <view class="good_parameter_p">
+                    <view class="p_left">产品尺寸(mm):</view>
+                    <view class="p_right">长{{productinfo.pack.size_l}}x宽{{productinfo.pack.size_w}}x高{{productinfo.pack.size_h}}</view>
+                </view>
+                <view class="good_parameter_p">
+                    <view class="p_left">包装尺寸(mm):</view>
+                    <view class="p_right">长{{productinfo.pack.psize_l}}x宽{{productinfo.pack.psize_w}}x高{{productinfo.pack.psize_h}}</view>
+                </view>
+                <view class="good_parameter_p">
+                    <view class="p_left">产品净重(kg)</view>
+                    <view class="p_right">{{productinfo.pack.goods_weight}}</view>
+                </view>
+                <view class="good_parameter_p">
+                    <view class="p_left">包装重量(kg)</view>
+                    <view class="p_right">{{productinfo.pack.size}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="hr_div"></view>-->
+    <!--评价
+         productinfo.evaluate（循环这个）
+         add_time:评价时间  ,content:评价内容,   goal:评价分数   nkname:评价人昵称
+    -->
+    <view class="good_evaluate">
+        <!--无评价时-->
+         <!--<view class="evaluate">
+            <view class="good_txt">暂无评价（0）</view>
+        </view>-->
+        <!--有评价时-->
+        <view class="evaluate">
+            <view class="good_txt">评价</view>
+            <view class="good_evaluate_btn" bindtap="moreeval">
+                <text class="right_bg"></text>
+                <!--<text class="yellow">100%</text>好评-->
+                <text class="yellow">查看更多评价</text>
+            </view>
+        </view>
+        <view class="good_evaluate_box">
+            <view class="good_main good_evaluate_list" wx:for="{{productinfo.evaluate}}">
+                  <view class="good_Buyers">
+                      <view class="Buyers">
+                          <image src="../../images/buyers.png" mode="widthFix"></image><text>{{item.nkname}}**</text>
+                      </view>
+                      <view class="Buyers_goal">
+                          <image wx:for="{{item.goal}}" src="../../images/star_select.png" mode="widthFix"></image>
+                      </view>
+                  </view>
+                  <!--评价内容-->
+                  <view class="Buyers_evaluate">{{item.content}}</view>
+                  <!--评价图片-->
+                  <view class="Buyers_evaluate_pic" >
+                              <image wx:for="{{item.img}}" wx:for-item="venimg" class="{{(index+1)%4? '':'no_rm'}}"  src="{{productinfo.evalurl}}{{venimg}}" mode="widthFix"/>
+                      <!--<image  src="../../images/buyers.png" mode="widthFix"></image>-->
+                  </view>
+                  <!--评价时间-->
+                  <view class="Buyers_add_time">{{item.add_time}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="hr_div"></view>
+    <!--产品图文详情-->
+    <view class="good_detail">
+        <view class="evaluate">
+            <view class="good_txt">图文详情</view> 
+            <view class="good_evaluate_btn">
+                <text class="right_bg"></text>
+            </view>
+        </view>
+        <view class="detail">
+            <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+        </view>
+    </view>
+</view>
+<!--加入购物车-->
+<view class="car-box">
+    <view class="buy-car" bindtap="navgaTocar">
+        <view class="buy-car-img">
+            <image src="../../images/car.png" mode="widthFix"></image>
+            <view class="num">{{productinfo.catcount}}</view>
+        </view>
+        <text>购物车</text>
+    </view>
+    <view class="add-car" bindtap="shop" data-goods_id="{{productinfo.goods_id}}" bindtap="addCar">
+        加入购物车
+    </view>
+    <view class="buy-btn" bindtap="oncebuy">立即购买</view>
+</view>
+<toast hidden="{{aa}}" duration="1000" bindchange="toastHide">
+    {{gets}}
+</toast>

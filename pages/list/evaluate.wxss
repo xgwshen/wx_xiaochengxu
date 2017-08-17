@@ -1,0 +1,78 @@
+/*单个评价*/
+.good_evaluate_box{
+  padding: 0 4%;
+  font-size:26rpx;
+  color:#1c2951;
+  overflow: hidden;
+}
+ .good_evaluate_list{
+  border-bottom: 2rpx solid #e6e6e6;
+}
+ .good_evaluate_list .good_Buyers{
+  overflow: hidden;
+  line-height: 120rpx;
+}
+ .good_evaluate_list .good_Buyers image, .good_evaluate_list .good_Buyers text{
+  display: inline-block;
+}
+ .good_evaluate_list .Buyers, .good_evaluate_list .Buyers_goal{
+  float: left;
+  overflow: hidden;
+}
+ .good_evaluate_list .Buyers{
+  position: relative;
+}
+ .good_evaluate_list .Buyers_goal{
+  height: 120rpx;
+}
+ .good_evaluate_list .Buyers image{
+  width: 70rpx;
+  position:absolute;
+  top:50%;
+  left: 0;
+  transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+}
+ .good_evaluate_list .Buyers text{
+  margin: 0 30rpx 0 100rpx;
+  float: right;
+  letter-spacing:4rpx;
+}
+ .good_evaluate_list .Buyers_goal image{
+  width: 36rpx;
+  float: left;
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+}
+ .good_evaluate_box .Buyers_evaluate{
+  color: #000;
+  line-height: 32rpx;
+}
+/*评价图片*/
+.Buyers_evaluate_pic{
+  overflow: hidden;
+  padding: 24rpx 0 14rpx;
+  box-sizing: content-box;
+}
+.Buyers_evaluate_pic image{
+  width: 22%;
+  margin-right: 4%;
+  margin-bottom: 10rpx;
+}
+/*评价时间*/
+ .good_evaluate_box .Buyers_add_time{
+  margin-bottom: 24rpx;
+}
+.nodata1,.nodata2{
+  text-align: center;
+  font-size: 32rpx;
+  color: #999;
+}
+.nodata1{
+  margin-top: 40%;
+}
+.nodata2{
+  margin-top: 70%;
+}

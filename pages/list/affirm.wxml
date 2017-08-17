@@ -1,0 +1,135 @@
+<!--收获地址选择（有默认的则用默认的，没有就自己去选择添加）-->
+<view class="hr_div2"></view>
+<view class="address" wx:if="{{address}}" bindtap="seladdress">
+    <view class="wrap addr_main">
+        <view class="left_img">
+            <icon type="success" size="18" color="#d70a1d"/>
+        </view> 
+        <view class="addr_center">
+            <view class="name">{{address.name}}    {{address.tel}}</view>
+            <view class="ip">{{address.province}}{{address.city}}{{address.county}}{{address.address}}</view>
+        </view>
+        <view class="right_img" bindtap="address">
+            <image src="../../images/edit.png" mode="widthFix"></image>
+        </view>
+    </view>
+</view>
+<view class="no_addr" wx:else  bindtap="seladdress">
+    <view class="wrap addr_main">
+        <view class="left_img">
+            <image src="../../images/ip.png" mode="widthFix"></image>
+        </view> 
+        <view class="addr_center">
+            请选择收获地址
+        </view>
+        <view class="right_img" bindtap="address">
+            <image src="../../images/jiantou2.png" mode="widthFix"></image>
+        </view>
+    </view>
+</view>
+<view class="hr_div"></view>
+
+<!--购买的产品信息-->
+<view class="wrap order_con">
+  <view class="order_dian">
+    <view class="left">
+        <view class="left_img">
+            <image src="../../images/sale_logo.png" mode="widthFix"></image>
+        </view>
+        <view class="left_dian_name"></view>
+    </view>
+  </view>
+</view>
+<view class="box" wx:for="{{buygoods}}">
+    <view class="wrap order_con">
+        <view class="order_middle">
+              <view class="middle_img">
+                  <image src="{{prcurl}}{{item.goods_thumb}}" mode="widthFix"></image>
+              </view>
+              <view class="middle_center">
+                  <view class="middle_name">{{item.goods_name}}</view>
+                  <!--<view class="middle_color">-->
+                  <!--<view class="middle_name" wx:if="{{(item.colour_name)}}">形容词</view>
+                  <view class="middle_name" wx:elif="{{(item.norms_name)}}">形容词</view>-->
+                  <view class="middle_norms">
+                        <text class="guige">{{item.norms_name}}</text>
+                        <text class="middle_price">￥{{item.price}}</text>
+                  </view>
+                  <view class="middle_bottom">
+                        <view class="middle_hui">满减优惠</view>
+                        <view class="middle_number">x{{item.goods_number}}</view>
+                  </view>
+              </view>
+        </view>
+    </view>
+    <!--<view class="white line_height buy_num">
+        <view class="left">购买数量</view>
+        <view class="right">
+            <view class="good_num_red" bindtap="reduce" data-index="{{index}}">-</view>
+            <input class="good_num_val" type="text" value="{{item.goods_number}}" disabled/>
+            <view class="good_num_add" bindtap="add" data-index="{{index}}">+</view>
+        </view>
+    </view>-->
+    
+    <view class="hr_div"></view>
+</view>
+<view class="white line_height fapiao">
+        <view class="left">发票信息</view>
+        <view class="right">个人/明细></view>
+    </view>
+    
+    <!--优惠券-->
+    <view class="white line_height wrap quan">
+        <view class="left">优惠券</view>
+         <view class="right" wx:if="{{favoraprice}}">-{{favoraprice}}</view> 
+        <view class="right" bindtap="favora" wx:else>选择优惠券</view>
+    </view>
+    <!--留言-->
+    <view class="white line_height wrap ly">
+        <view class="left" >买家留言</view>
+    </view>
+    <view class="line_height wrap lyval ly">
+        <input type="text" placeholder="请勿填写和发票、支付相关信息" placeholder-placeholder-class="gray_input" bindblur="leavedata" style="font-family:'微软雅黑'"/>
+       
+    </view>
+    <!--商品金额-->
+    <view class="hr_div2"></view>
+    <view class="wrap line_height2 total">
+        <!--<view class="pay">-->
+            <view class="left">商品金额</view>
+            <view class="right">￥{{(allprice)}}</view>
+        <!--</view>-->
+    </view>
+    <!--优惠-->
+    <view class="wrap line_height2 youhui">
+        <view class="left">已优惠</view>
+        <view class="right">￥{{favoraprice}}</view>
+    </view>
+    <!--运费-->
+    <view class="wrap line_height2 yunfei">
+        <view class="left">运费</view>
+        <view class="right">￥0.00</view>
+    </view>
+    <view class="wrap heji">
+        共{{allnum}}件，合计：<text class="red">￥{{(allprice-(favoraprice?favoraprice:0))}}</text>
+    </view>
+<!--<view wx:for="{{buygoods}}">
+产品名称：{{item.goods_name}}
+产品价格：{{item.price}}
+产品数量：{{item.goods_number}}
+</view>
+<view >产品优惠：{{favora.fav_name}}</view>
+<view >-->
+<!--商品总金额-->
+<!--商品总价：{{(allprice-(favora.act_type_ext?favora.act_type_ext:0))}}-->
+<!--优惠券-->
+<!--商品优惠：-{{favora.act_type_ext?favora.act_type_ext:0}}
+</view>-->
+
+<view class="add-car" bindtap="getaffirm" >
+      <view>微信支付</view> 
+</view>
+<toast hidden="{{aa}}" duration="3000" bindchange="toastHide">
+   {{gets}}
+</toast>
+

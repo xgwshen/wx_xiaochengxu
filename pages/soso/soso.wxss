@@ -1,0 +1,182 @@
+/****搜索框****/
+image {
+  width:100%;
+  display:inline-block;
+  overflow:hidden;
+}
+.no-rbor{
+    border-right: 0!important;
+}
+#bigWap{
+    background: #fff;
+}
+.search{
+  width: 88%;
+  margin:40rpx auto 40rpx;
+  overflow: hidden;
+}
+.search text{
+  float: left;
+  width: 10%;
+  height: 70rpx;
+  background:#edf0f2 url(https://www.stokke-china.com/xcx/images/soso.png) center center no-repeat;
+  background-size: 40rpx 40rpx;
+  border-top-left-radius: 12rpx;
+  border-bottom-left-radius: 12rpx;
+}
+.search input{
+  width: 72%;
+  font-size: 28rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-top-right-radius: 12rpx;
+  border-bottom-right-radius: 12rpx;
+  float: left;
+  background:#edf0f2;
+}
+.search .cd9{
+  color: #d9d9d9;
+}
+.search button{
+  width: 16%;
+  padding: 0;
+  margin: 0;
+  background: #d70a1d;
+  color: #fff;
+  height: 64rpx;
+  line-height: 64rpx;
+  border: 0;
+  font-size: 28rpx;
+  border-radius: 12rpx;
+  text-align: center;
+  margin-left: 2%;
+  float: left;
+}
+.button-hover[type=":default"]{
+  background-color:#c9e019!important;
+}
+/*推荐*/
+.promote{
+  overflow: hidden;
+  width: 86%;
+  padding: 0 7%;
+}
+.hot-products{
+  margin-bottom: 30rpx;
+}
+.wraper{
+  width: 86%;
+  padding: 0 7%;
+}
+.bt{
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #999;
+  display: block;
+  margin-bottom: 24rpx;
+}
+.promote .pro_wrap{
+  overflow: hidden;
+}
+.promote .pro_wrap view{
+  float: left;
+  padding: 12rpx 32rpx;
+  font-size: 28rpx;
+  color: #5d5d5d;
+  border: 2rpx solid #d9d9d9;
+  border-radius: 10rpx;
+  margin: 0 20rpx 20rpx 0;
+}
+/*热卖商品*/
+.hot-list{
+  overflow: hidden;
+  position: relative;
+  border-top: 2rpx solid #e5e5e5;
+}
+.hot-img{
+  width: 32%;
+  height: 240rpx;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+.hot-img image{
+  width: 84%;
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.hot-right{
+  width: 55%;
+  float: right;
+  overflow: hidden;
+  font-size: 28rpx;
+  position:absolute;
+  top:50%;
+  right:7%;
+  transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+
+}
+.hot-right .hot-name,.hot-right .hot-dec{
+  line-height: 1.3;
+  margin-bottom: 4rpx;
+}
+.hot-right .hot-dec{
+  color: #999;
+   margin-bottom: 8rpx;
+}
+.hot-right .hot-hui{
+  width: 32%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background: #ff5600;
+  margin-bottom: 8rpx;
+}
+.hot-right .price1{
+  color: #ff5600;
+}
+.hot-right .price2{
+  color: #999;
+  margin-left: 8rpx;
+  text-decoration: line-through;
+}
+.hot-right .ly{
+  color: #999;
+  float: right;
+}
+/*搜索结果列表*/
+.sear-list{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.sear-list .sear-item{
+  padding: 0;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  padding-left: 5%;
+  color: #666;
+  border-top: 2rpx solid #ccc; 
+}
+.sear-list  .item-hover{
+  color: #0092d8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
